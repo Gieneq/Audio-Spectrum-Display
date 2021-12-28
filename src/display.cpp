@@ -6,7 +6,7 @@ effect_t effect = effect_t::ORIGINAL;
 constexpr uint8_t CLASSIC_BAR_HUE[] = {100, 100, 100, 100, 100, 100, 100, 100, 60, 60, 60, 60, 60, 60, 60, 60, 0, 0, 0, 0, 0};
 
 //COLOROFON & COLOROFON_EXTENDED EFFECTS
-constexpr long COLOROFON_HUE_INTERVAL = 20;
+constexpr long COLOROFON_HUE_INTERVAL = 100;
 long last_colorofon_hue_time;
 constexpr int COLOROF_BLOCKS = 3;
 constexpr int COLOROFON_BAR_BINS[] = {0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2};
@@ -26,8 +26,21 @@ int twinkle_counter;
 constexpr int FIRE_BASE_TICS = 6;
 constexpr int FIRE_RANDOM_TICS = 24;
 
-// constexpr long FIRE_TWINKLE_INTERVAL = 5;
-// long last_twinkle_time;
+// ELECTRIC
+constexpr int PULSE_DEFAULT_HUE = 160;
+constexpr int PULSE_HUE_GAP = 32;
+constexpr int PULSE_TRHRESHOLD = 8;
+int pulse_shooted[DISPLAY_W];
+int pulse_height[DISPLAY_W];
+constexpr long PULSE_INTERVAL = 14;
+long last_pulse_time;
+
+constexpr int PULSE_BUFF_LEN = 8;
+int pulse_buff_end_index = 0;
+int pulse_buff_front_index = PULSE_BUFF_LEN-1;
+int pulse_buffer[DISPLAY_W * PULSE_BUFF_LEN];
+uint8_t hue_shuffle[DISPLAY_W * 2];
+constexpr int PULSE_TAIL_LEN = 8;
 
 CRGB display_leds[DISPLAY_LEDS_COUNT];
 
@@ -40,6 +53,11 @@ void display_begin() {
   //preset equal distance
   for(int i = 0; i < COLOROF_BLOCKS; i++)
     colorofon_hue_phases[i] = uint8_t(i*255.0/COLOROF_BLOCKS);
+
+  for(int i = 0; i < DISPLAY_W; i++){
+    hue_shuffle[i * 2] = PULSE_DEFAULT_HUE;
+    hue_shuffle[i * 2 + 1] = random(PULSE_DEFAULT_HUE-PULSE_HUE_GAP, PULSE_DEFAULT_HUE+PULSE_HUE_GAP);
+  }
 
   // last_fire_hue_time = millis();
   last_burn_time = millis();
@@ -113,7 +131,7 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
     for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
       for(int display_y = 0; display_y < bar_heights[display_x]; display_y++) {
         uint8_t hue = CLASSIC_BAR_HUE[display_y];
-        set_hsv(display_x, display_y, hue, 160, 255);
+        set_hsv(display_x, display_y, hue, 255, 255);
       }
 
       for(int display_y = bar_heights[display_x]; display_y < DISPLAY_H; display_y++)
@@ -168,14 +186,7 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
 
   // FIRE
   else if (effect == effect_t::FIRE) {
-    // if(millis() - last_fire_hue_time > FIRE_HUE_INTERVAL) {
-    //   fire_hue += 4;
-    //   fire_hue %= 256;
-    //   last_fire_hue_time += FIRE_HUE_INTERVAL;
-    // }
-
-    twinkle_counter++;
-    twinkle_counter%=128;
+    ++twinkle_counter%=128;
 
     static int reduce_burn;
     if(millis() - last_burn_time > BURN_INTERVAL){
@@ -207,9 +218,7 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
               fire_value = 255;
           }
         }
-        // uint8_t fire_value = NOISE_FLAMES[(twinkle_counter + display_x*6)%128];
-        // if(display_y == bar_heights[display_x]-1)
-        //   fire_value = 255;
+
         set_hsv(display_x, display_y, fire_hue, fire_saturation, fire_value);
         burnt[get_idx(display_x, display_y)] = FIRE_BASE_TICS + random(FIRE_RANDOM_TICS);
       }
@@ -226,22 +235,69 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
     }
   }
 
-  // ELECTRIC - hue:140-180, impulsy - podpijaja, gasnie jak opada
-  //th pojawia sie tylko na chwile wiec trzeba to 
-  else if (effect == effect_t::ELECTRIC) {
+  // PULSE
+  else if (effect == effect_t::PULSE) {
+    ++twinkle_counter %= 128;
+
+    if(millis() - last_pulse_time > PULSE_INTERVAL){
+      for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
+        if(pulse_shooted[display_x] == 1) {
+          if(bar_heights[display_x] - pulse_height[display_x] > 0)
+            pulse_height[display_x]++;
+          else{
+            pulse_shooted[display_x] = 0;
+            pulse_height[display_x] = 0;
+            hue_shuffle[display_x*2] = hue_shuffle[display_x*2 + 1];
+            hue_shuffle[display_x*2 + 1] = random(PULSE_DEFAULT_HUE-PULSE_HUE_GAP, PULSE_DEFAULT_HUE+PULSE_HUE_GAP);
+          }
+        }
+      }
+      last_pulse_time += PULSE_INTERVAL;
+    }
+
+    ++pulse_buff_end_index %= PULSE_BUFF_LEN;
+    ++pulse_buff_front_index %= PULSE_BUFF_LEN;
+    
     for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
-      for(int display_y = 0; display_y < DISPLAY_H; display_y++)
-        set_rgb(display_x, display_y, 0,0,0);
-
-      for(int display_y = 0; display_y < bar_heights[display_x]; display_y++) {
-        uint8_t hue = random8(146, 182);
-        uint8_t value = random8(200, 255);
-
-        set_hsv(display_x, display_y, hue, 255, value);
+      pulse_buffer[display_x * PULSE_BUFF_LEN + pulse_buff_front_index] = bar_heights[display_x];
+      //czy ostatnio dolecial
+      if(pulse_shooted[display_x] == 0) {
+        if(pulse_buffer[display_x * PULSE_BUFF_LEN + pulse_buff_front_index] - pulse_buffer[display_x * PULSE_BUFF_LEN + pulse_buff_end_index] > PULSE_TRHRESHOLD) {
+          //shoot from ground!
+          pulse_shooted[display_x] = 1;
+          pulse_height[display_x] = 0;
+        }
+      }
+    }
+    
+    for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
+        
+      for(int display_y = 0; display_y < pulse_height[display_x]; display_y++) {
+        uint8_t saturation = 255;
+        if(display_y <= pulse_height[display_x]-1 && display_y > pulse_height[display_x]-PULSE_TAIL_LEN-1){
+          if(display_y > pulse_height[display_x]-3) {
+            saturation = 0;
+          } else{
+            uint8_t diff = pulse_height[display_x] - display_y-1-2;
+            saturation = uint8_t(255.0*diff/PULSE_TAIL_LEN);
+          }
+        }
+        //new color
+        set_hsv(display_x, display_y, hue_shuffle[display_x*2 + 1], saturation, 255);
       }
 
-        if(bar_heights[display_x] > 0)
-          set_rgb(display_x, bar_heights[display_x] - 1, 255,255,255);
+      for(int display_y = pulse_height[display_x]; display_y < bar_heights[display_x]; display_y++) {
+
+        set_hsv(display_x, display_y, hue_shuffle[display_x*2], 255, 255);
+      }
+
+      //clear
+      for(int display_y = bar_heights[display_x]; display_y < DISPLAY_H; display_y++)
+        set_rgb(display_x, display_y, 0,0,0);
+
+      // if(pulse_shooted[display_x] == 1)
+      //   set_hsv(display_x, pulse_height[display_x], 255, 0, 255);
+
     }
   }
 

@@ -7,7 +7,13 @@
 #include "soc/timer_group_struct.h"
 #include "soc/timer_group_reg.h"
 
-effect_t sel_effect = effect_t::FIRE;
+#define EFFECTS_COUNT 6
+effect_t queue[] = {effect_t::FIRE, effect_t::PULSE, effect_t::CLASSIC, effect_t::COLOROFON, effect_t::ORIGINAL, effect_t::COLOROFON_EXTENDED};
+
+int effect_index;
+
+#define EFFECTS_SHUFFLE_INTERVAL 30000
+long next_effect_time;
 
 //zrob detekcje energi - zmiana koloru - szybka ostra muzyka czerwien, ladgodna niebieski
 
@@ -114,13 +120,14 @@ void setup() {
     Serial.begin(115200);
     Serial.println(F("FFT Spectrum Display"));
     display_begin();
-    set_effect(sel_effect);
+    set_effect(queue[effect_index]);
 
     Serial.println(xPortGetCoreID());
 
     xTaskCreatePinnedToCore(core0_task, "FFT_processor", 64000, NULL, 1, NULL,  0);
     last_time_core1 = millis();
     last_time_draw = millis();
+    next_effect_time = millis();
 }
 
 
@@ -172,6 +179,13 @@ int bars[BARS_COUNT]; //rendering
 
 void loop() {
     // UPDATE
+
+    if(millis() - next_effect_time > EFFECTS_SHUFFLE_INTERVAL) {
+        ++effect_index %= EFFECTS_COUNT;
+        set_effect(queue[effect_index]);
+        next_effect_time += EFFECTS_SHUFFLE_INTERVAL;
+    }
+
     if(millis() - last_time_update > UPDATE_INTERVAL_MS) {
     // Serial.print("Update: ");
     // Serial.println(millis() - last_time_update - UPDATE_INTERVAL_MS);

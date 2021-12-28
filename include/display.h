@@ -14,7 +14,7 @@ enum class effect_t {
     COLOROFON,
     COLOROFON_EXTENDED,
     FIRE,
-    ELECTRIC,
+    PULSE,
     MATRIX
 };
 
