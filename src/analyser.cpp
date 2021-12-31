@@ -2,7 +2,7 @@
 #include "math.h"
 
 constexpr double NOISE_LIMIT = 512.0 * 4;
-constexpr double BAR_HEIGHT_MODIFIER = COLS_HEIGHT/(1024.0*128.0); //(COLS_HEIGHT)/1512.0/128.0;
+constexpr double BAR_HEIGHT_MODIFIER = BAR_HEIGHT/(1024.0*128.0); //(COLS_HEIGHT)/1512.0/128.0;
 constexpr unsigned long SAMPLING_PERIOD_US = static_cast<unsigned long>(1000000.0 / SAMPLING_FREQUENCY);
 constexpr uint16_t USABLE_SAMPLES_COUNT = SAMPLES_COUNT/2 - 1;
 unsigned long sampling_time_us;
@@ -68,31 +68,9 @@ double* get_magnitudes() {
 }
 
 void feedTone(double frequency) {
-    for (int i = 0; i < SAMPLES_COUNT; i++) {
-        vReal[i] = 512.0 + 256.0*sin(2.0*3.1415*frequency * i / SAMPLING_FREQUENCY);
-        vImag[i] = 0;
-    }
+    // for (int i = 0; i < SAMPLES_COUNT; i++) {
+    //     vReal[i] = 512.0 + 256.0*sin(2.0*3.1415*frequency * i / SAMPLING_FREQUENCY);
+    //     vImag[i] = 0;
+    // }
 }
 
-
-
-
-    // // for (int i = 0; i < SAMPLES_COUNT; i++) {
-    //     while(micros() - sampling_time_us > SAMPLING_PERIOD_US) {
-    //         vReal[sampling_counter] = analogRead(AUDIO_PIN);
-    //         if(AUDIO_PIN == AUX_PIN)
-    //             vReal[sampling_counter] *= 8;
-    //         vImag[sampling_counter++] = 0;
-    //         sampling_time_us += SAMPLING_PERIOD_US;
-
-    //         if(sampling_counter >= SAMPLES_COUNT) {
-    //             sampling_counter = 0;
-    //             // calculate_bars();
-    //             return 1;
-    //         }
-    //     }
-    //     return 0;
-    //     // while (micros() - passed_time_us < SAMPLING_PERIOD_US) {
-    //     // }
-    //     // passed_time_us += SAMPLING_PERIOD_US;
-    // // }

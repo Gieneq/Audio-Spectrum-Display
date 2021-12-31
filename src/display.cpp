@@ -2,6 +2,10 @@
 
 effect_t effect = effect_t::ORIGINAL;
 
+//TOOLS
+long last_burst_time;
+constexpr int BRURST_INTERVAL = 2;
+
 //CLASSIC EFFECT
 constexpr uint8_t CLASSIC_BAR_HUE[] = {100, 100, 100, 100, 100, 100, 100, 100, 60, 60, 60, 60, 60, 60, 60, 60, 0, 0, 0, 0, 0};
 
@@ -17,7 +21,7 @@ int colorofon_extended_hue_phase;
 constexpr uint8_t FIRE_TONGUE_HUE[] = {12, 16, 32, 33, 34, 35, 36, 37, 37, 37, 37, 36, 35, 34, 33, 20, 19, 18, 255, 255, 255};
 int burnt[DISPLAY_LEDS_COUNT];
 constexpr uint8_t FIRE_HUE = 22; 
-constexpr uint8_t BURNT_HSV_VALUE = 32;//static_cast<uint8_t>(-0.18 * MAX_BRIGHTNESS + 68);
+constexpr uint8_t BURNT_HSV_VALUE = 32;//static_cast<uint8_t>(-0.18 MEAN + 68);
 constexpr uint8_t BURNT_HUE = 254;
 constexpr long BURN_INTERVAL = 300;
 long last_burn_time;
@@ -25,6 +29,8 @@ extern const uint8_t NOISE_FLAMES[];
 int twinkle_counter;
 constexpr int FIRE_BASE_TICS = 6;
 constexpr int FIRE_RANDOM_TICS = 24;
+int total_brightness = MIN_BRIGHTNESS;
+
 
 // ELECTRIC
 constexpr int PULSE_DEFAULT_HUE = 160;
@@ -43,10 +49,12 @@ uint8_t hue_shuffle[DISPLAY_W * 2];
 constexpr int PULSE_TAIL_LEN = 8;
 
 CRGB display_leds[DISPLAY_LEDS_COUNT];
+CRGB base_leds[BASE_LEDS_COUNT];
 
 void display_begin() {
   FastLED.addLeds<LED_TYPE, DISPLAY_PIN, COLOR_ORDER>(display_leds, DISPLAY_LEDS_COUNT).setCorrection(TypicalSMD5050);
-  FastLED.setBrightness(MAX_BRIGHTNESS);
+  FastLED.addLeds<LED_TYPE, BASE_PIN, COLOR_ORDER>(base_leds, BASE_LEDS_COUNT).setCorrection(TypicalSMD5050);
+  FastLED.setBrightness(MIN_BRIGHTNESS);
   fill_rgb(0, 0, 0);
   display_show();
 
@@ -62,6 +70,7 @@ void display_begin() {
   // last_fire_hue_time = millis();
   last_burn_time = millis();
   last_colorofon_hue_time = millis();
+  last_burst_time = millis();
 }
 
 
@@ -97,17 +106,13 @@ void set_effect(effect_t effect_type) {
   effect = effect_type;
 }
 
-void draw_bars(int* bar_heights, double* bar_thrs) {
-  // for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
-  //   for(int display_y = 0; display_y < 20; display_y++) {
-  //     int hue = display_x * 20 + display_y;
-  //     if(hue < 256)
-  //       set_hsv(display_x, display_y, hue,255,255);
-  //     else
-  //       set_hsv(display_x, display_y, 0,0,0);
-  //   }
-  // }
-  // return;
+
+extern double energy;
+extern double burst_energy;
+extern double mean_energy;
+
+void display_update(const int* bar_heights, const double* bar_thrs, double energy, double burst_energy, double mean_energy) {
+
 
   // ORIGINAL
   if (effect == effect_t::ORIGINAL) {
@@ -186,13 +191,35 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
 
   // FIRE
   else if (effect == effect_t::FIRE) {
-    ++twinkle_counter%=128;
+    ++twinkle_counter;
 
     static int reduce_burn;
     if(millis() - last_burn_time > BURN_INTERVAL){
       reduce_burn = 1;
       last_burn_time += BURN_INTERVAL;
     }
+
+  int base_hue = constrain(int(mean_energy), 0, DISPLAY_H);
+  for(int base_x = 0; base_x < BASE_LEDS_COUNT; base_x++)
+    base_leds[base_x] = CHSV(FIRE_TONGUE_HUE[base_hue], 255,255);
+  
+
+    if(total_brightness < TOP_BRIGHTNES/2) {
+      if(energy - mean_energy > 4)
+        total_brightness = TOP_BRIGHTNES;
+    }
+
+
+    if (millis() - last_burst_time > BRURST_INTERVAL) {
+      if(total_brightness > MIN_BRIGHTNESS)
+        total_brightness-=5;
+      if(total_brightness < MIN_BRIGHTNESS)
+        total_brightness = MIN_BRIGHTNESS;
+
+      last_burst_time += BRURST_INTERVAL;
+    }
+
+    FastLED.setBrightness(total_brightness);
 
     for(int display_x = 0; display_x < DISPLAY_W; display_x++) {
       for(int display_y = 0; display_y < DISPLAY_H; display_y++)
@@ -277,7 +304,7 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
         if(display_y <= pulse_height[display_x]-1 && display_y > pulse_height[display_x]-PULSE_TAIL_LEN-1){
           if(display_y > pulse_height[display_x]-3) {
             saturation = 0;
-          } else{
+          } else {
             uint8_t diff = pulse_height[display_x] - display_y-1-2;
             saturation = uint8_t(255.0*diff/PULSE_TAIL_LEN);
           }
