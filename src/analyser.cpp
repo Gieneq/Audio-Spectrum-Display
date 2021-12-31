@@ -37,7 +37,7 @@ void sample_blocking(){
 
 void load_samples(int read_index, volatile int* read_buffer, const int buffersize) {
     for (int i = 0; i < SAMPLES_COUNT; i++) {
-        vReal[i] = 2*(read_buffer[read_index--] - 1800); //DC removal
+        vReal[i] = read_buffer[read_index--]; //DC removal  - 1800
         vImag[i] = 0;
         if(read_index < 0)
             read_index = buffersize-1;
@@ -45,7 +45,7 @@ void load_samples(int read_index, volatile int* read_buffer, const int buffersiz
 }
 
 void calculate_bars() {
-    // FFT.DCRemoval();
+    FFT.DCRemoval();
     FFT.Windowing(FFT_WIN_TYP_HAMMING, FFT_FORWARD);
 
     FFT.Compute(FFT_FORWARD);

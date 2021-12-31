@@ -221,7 +221,7 @@ void draw_bars(int* bar_heights, double* bar_thrs) {
 
         set_hsv(display_x, display_y, fire_hue, fire_saturation, fire_value);
         burnt[get_idx(display_x, display_y)] = FIRE_BASE_TICS + random(FIRE_RANDOM_TICS);
-      }
+      } 
 
       for(int display_y = bar_heights[display_x]; display_y < DISPLAY_H; display_y++) {
         int idx = get_idx(display_x, display_y);

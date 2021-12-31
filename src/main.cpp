@@ -7,9 +7,8 @@
 #include "soc/timer_group_struct.h"
 #include "soc/timer_group_reg.h"
 
-#define EFFECTS_COUNT 6
+#define EFFECTS_COUNT 1
 effect_t queue[] = {effect_t::FIRE, effect_t::PULSE, effect_t::CLASSIC, effect_t::COLOROFON, effect_t::ORIGINAL, effect_t::COLOROFON_EXTENDED};
-
 int effect_index;
 
 #define EFFECTS_SHUFFLE_INTERVAL 30000

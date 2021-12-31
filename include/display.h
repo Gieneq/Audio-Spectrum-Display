@@ -22,13 +22,13 @@ constexpr auto  COLOR_ORDER  =  GRB;
 constexpr int  MAX_BRIGHTNESS = 80;
 
 // FRONT MATRIX DISPLAY: 19 COLS, 21 ROWS
-constexpr int DISPLAY_PIN = 19;
+constexpr int DISPLAY_PIN = 18;
 constexpr int DISPLAY_W = 19;
 constexpr int DISPLAY_H = 21;
 constexpr int DISPLAY_LEDS_COUNT = DISPLAY_W * DISPLAY_H;
 
 // UNDERLIGHT: 2 SHORT STRIPS
-constexpr int BASE_PIN = 18;
+constexpr int BASE_PIN = 19;
 constexpr int BASE_LEDS_COUNT = 2*7;
 
 void display_begin();
