@@ -8,6 +8,13 @@
 
 Project is finished and working, but there are some improvents to be done.
 
+## Content 📦
+
+You will find all you need to DIY your own display:
+* ✔️ src/include - source code,
+* ✔️ generator - python code to generate bands bins,
+* ✔️ mechanics - Corel Draw/PDF files to cut your own casing!
+
 ## Casing 🖥️
 
 <p align="center">
