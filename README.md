@@ -13,6 +13,7 @@ Project is finished and working, but there are some improvents to be done. [Subs
 You will find all you need to DIY your own display:
 * ✔️ src/include - source code,
 * ✔️ generator - python code to generate bands bins,
+* ✔️ schematics - electronic schematics, and PCB designs,
 * ✔️ mechanics - Corel Draw/PDF files to cut your own casing!
 
 ## Casing 🖥️
