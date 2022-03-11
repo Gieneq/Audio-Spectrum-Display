@@ -6,7 +6,7 @@
 
 19 bands (21 height) audio spectrum display built around ESP32 chip. It process audio signal from 3.5 mm socket or microphone using FFT and drives matrix according to resulting magnitudes - each column of display represent specific frequency content in signal. The higher the amplitude of specific frequency, the higher magnitude.
 
-Project is finished and working, but there are some improvents to be done.
+Project is finished and working, but there are some improvents to be done. [Subscribe me on YouTbe](https://www.youtube.com/channel/UCZFgL5xrtGkf4WiEQYAMehw/videos) to be up to date with further updates.
 
 ## Content 📦
 
