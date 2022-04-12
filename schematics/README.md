@@ -30,7 +30,7 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 Output voltage is described by voltage divider, so gain (ratio of output and input voltages) is given by formula:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 + R_2} [\frac{V}{V}]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R_2} [\frac{V}{V}]" >
 
 Let's see how gain changes with R1:
 
@@ -49,7 +49,7 @@ Thevenin's theorem says that any linear circuit can be reaplaced by voltage sour
 
 Open circuit voltage can be obtained from voltage divider:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
 Then short circuit current is given by formula:
 
@@ -59,7 +59,7 @@ R1 is shorten so Thevenin's current depends only on series resistance R2.
 
 Thevenin's equivalent resistance is:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_{1} + R_{2}} [\Omega]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_{1} \!%2B\! R_{2}} [\Omega]" >
 
 Worth mentioning: **voltage gain of this system is not Thevenin's resistance!**
 
@@ -73,7 +73,7 @@ Equivalent circuit is made using:
 
 To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source witout any loss on resistor, becouse of no current flow. So output voltage is simply:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
 Let's consider how Thevenin's resistance (called output resistance) vary with R1 and how much current circuit can deliver during short circuit:
 
@@ -84,17 +84,23 @@ Let's consider how Thevenin's resistance (called output resistance) vary with R1
 |1k|91R|0.91V|10mA|0.83mW|
 |10k|99R|0.99V|10mA|0.1mW|
 
-As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that short circuit current shorts R1, so only R2 counts to current.
+As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that when R1 is sorted, so only R2 counts to the current.
 
-Lower output resistance varies with R1 but it does not mean, that circuit candeliver more power. Lower parallel resistance means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
+Output resistance varies with R1 changing. Lower output resistance does not mean, that circuit can deliver more power, becouse despite lower parallel resistance means more current flow it also means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=P = U_{R1} \cdot I_{R1} = \frac{U_{out}^2}{R_1} = \frac{U_{th}^2}{R_1} [W]" >
 
 The most power is transfered when resistances are equal.
 
-Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output like this:
+Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output:
 
 >ilustracja
+
+Becouse Thevenin's restance of R1 and R2 circuit cannot exceed 99R, most power will be transfered when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
+
+So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
+- source output impedance e.g. 50R,
+- receiver impedance e.g. 100k.
 
 |R1|Rth|Uth|IR3|Uout|R13| P3|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -103,9 +109,11 @@ Now let's consider equivalent Thevenin's circuit with another 100R resistor conn
 |1k|91R|0.91V|4.76mA|0.47V|91R|2.27mW|
 |10k|99R|0.99V|4.97mA|0.497V|99R|2.47mW|
 
-Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads.
+In most cases receivers are buffer circuits made out of op-amps with high input impedance and low output impedance. So to sustainhigh quality signal all processing blocks shoudld be spread scross min and max impedances.
 
-Rth is 91R and Uth = 0.91V
+When audio signall passes to ADC it is required to know how ADC processes signal and thus the current draw.
+
+Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 91R and Uth = 0.91V.
 
 |R1|R3|R13|IR3|Uout|P3|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -113,6 +121,19 @@ Rth is 91R and Uth = 0.91V
 |1k|100|90.91R|4.76mA|0.48V|2.28mW|
 |1k|1k|500R|0.83mA|0.83V|0.69mW|
 |1k|10k|909R|0.09mA|0.9V|0.08mW|
+
+Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two, so knowing that starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
+
+R1=1k so whatever resistance value of R3 we will chooseoverall parallel resistance will be less or very close to 1k. The table shows than when chooseing the same value for R3 as R1 overall resistance drop significantly to 0.5k which grants slight voltage drop giving 0.83V onoutput and 1.67mA constant current draw.
+
+So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
+
+## Summary
+
+When chaining filter blocks the following tips should be considered:
+- Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
+- Chained blocks should have increasing impedance - by factor 10 should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest parallel impedance.
+- 
 
 # Signal preparation
 
@@ -204,7 +225,7 @@ To have better look on this circuit Thevenin theore can be used. It requires fin
 
 Voltage source can be described as time dependant voltage:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=u(t) = 1.2 + 0.76 \cdot cos(\omega t) [V]" >
+<img height="30" src="https://render.githubusercontent.com/render/math?math=u(t) = 1.2 \!%2B\! 0.76 \cdot cos(\omega t) [V]" >
 
 or using notation with complex voltage:
 
@@ -214,15 +235,15 @@ DC part will be trimmed, cosine part is lets say frozen so that final phasor in 
 
 Output voltage can be find out using voltage divider:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{U_{th}} = \bar{U}\frac{R_0}{R_0+R_{in}+Z_{C0}} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{U_{th}} = \bar{U}\frac{R_0}{R_0+R_{in} \!%2B\! Z_{C0}} [V]" >
 
 During short circuit R0 is excluded and final current is:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{I_{th}} = \frac{\bar{U}}{R_{in}+Z_{C0}} [A]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{I_{th}} = \frac{\bar{U}}{R_{in} \!%2B\! Z_{C0}} [A]" >
 
 Final Thevenin resistance is:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{Z_{th}} = \frac{\bar{U_{th}}}{\bar{I_{th}}} = \frac{R_0 (R_{in}+Z_{C0})}{R_0+R_{in}+Z_{C0}} [\Omega]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{Z_{th}} = \frac{\bar{U_{th}}}{\bar{I_{th}}} = \frac{R_0 (R_{in} \!%2B\! Z_{C0})}{R_0+R_{in}+Z_{C0}} [\Omega]" >
 
 ```python
 ZC0 = -1j/(w*C0)
