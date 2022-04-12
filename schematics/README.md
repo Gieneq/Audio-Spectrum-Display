@@ -53,6 +53,55 @@ Now the question is wherher it is a good choice. System looks like this with int
 |:-:|
 |<img src="schematic_microphone_high_pass.png" alt="" width="500">|
 
+## Capacitor reactance
+
+Capacitor reactance which is imaginary part of complex capacitor's impedance is given by formula:
+
+<img height="30" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
+
+Generate angular frequency Numpy array:
+
+```python
+def gen_w_array(min_f=20, max_f=20000, steps=100):
+  min_w = 2*pi*min_f
+  max_w = 2*pi*max_f
+
+  exp_a = min_w
+  exp_b = (max_w/exp_a)**(1/(steps-1))
+
+  w = exp_a*exp_b**np.arange(0,steps)
+  return w
+
+w = gen_w_array(min_f = 0.1, max_f = 40000, steps = 200)
+```
+Samples are exponentially distributed:
+
+|Frequencyrange 20Hz (125rad/s) to 20kHz(125664rad/s)|
+|:-:|
+|<img src="angular_frequency_samples.png" alt="" width="500">|
+
+Capacitance (capacitorreactances) ranges from 10k to 8R:
+
+|Capacitance of 1.6 uF capacitor|
+|:-:|
+|<img src="capacitance_1u6F.png" alt="" width="500">|
+
+## Output impedance
+
+To have better look on this circuit Thevenin theore can be used. It requires finding open circuit voltage and short circuit current and then dividing them to find out complex impedance.
+
+Voltage source can be described as time dependant voltage:
+
+<img height="30" src="https://render.githubusercontent.com/render/math?math=u(t) = 1.2 + 0.76*cos(\omega t) [V]" >
+
+or using notation with complex voltage:
+
+<img height="30" src="https://render.githubusercontent.com/render/math?math=\bar{U} = 0.76 [V]" >
+
+DC part will be trimmed, cosine part is lets say frozen so that final phasor in complex plane is rotated by phase shift and scaled by RMS voltage or amplitude (in this case).
+
+Output voltage can be find out using voltage divider:
+<img height="30" src="https://render.githubusercontent.com/render/math?math=\bar{U_{out}} = \bar{U}\frac{R_0}{R_0+R_{in}+C_0}" >
 
 
 # Audio Jack
