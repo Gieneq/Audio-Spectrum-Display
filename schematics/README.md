@@ -4,21 +4,21 @@
 |:-:|
 |<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
 
-In this article I willtry to explain how to choose values of passive components to process signal before sampling by ADC.
+In this article It will be explained how to choose values of passive components to process signal before being sampled by ADC.
 
 # Circuit theory basics
 
-Before talking about real circuit several words about circuit theory must be written.
+Before analysing about real circuit, several words about the circuit theory must be written. When considering resistive load those rules can be applied more generally to impedances.
 
-When designing blocks of analog filters, several varibles must be considered:
+When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
 - input impedance of filter,
 - cutoff frequency,
 - phase shift.
 
 Matching output and input impedance is crucial to obtain usefull signal – if:
-- following impedance is close to preciding one then output voltage will be scaled to half of input voltage,
-- following impedance is 10x greather than preciding impedance, then output voltage will be close to input voltage.
+- impedance of following block is close to the preciding one then output voltage will be scaled to half of input voltage,
+- impedance of following block is (rule of thumb) 10x greather than preciding impedance, then output voltage will be close to input voltage.
 
 ## Real voltage source
 
@@ -30,7 +30,7 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 Output voltage is described by voltage divider, so gain (ratio of output and input voltages) is given by formula:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 + R_2} [\frac{V}{V}]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 + R_2} [\frac{V}{V}]" >
 
 Let's see how gain changes with R1:
 
@@ -41,48 +41,78 @@ Let's see how gain changes with R1:
 |100R|1k|10x|0.91|
 |100R|10k|100x|0.99|
 
-The higher R2 the higher output voltage, but it cannot be cranced up freely – output impedance must be considered.
+The higher R1 the higher gain or output voltage, but it cannot be cranced up freely – output impedance must be considered and impedance of.
 
 ## Thevenin's Theorem
 
-Thevenin's theorem says that any linear circuit can be reaplaced by voltage source and resistance (impedance in generall) that behaves in the same way. Equivalent circuit canbe modelledusing open circuit voltage and short circuit current.
+Thevenin's theorem says that any linear circuit can be reaplaced by voltage source and resistance (impedance in generall) that behaves in the same way. Equivalent circuit can be modelled using **open circuit voltage** and **short circuit current**.
 
 Open circuit voltage can be obtained from voltage divider:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
 
 Then short circuit current is given by formula:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=I_{th} = \frac{U_{in}}{R_2} [A]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=I_{th} = \frac{U_{in}}{R_2} [A]" >
+
+R1 is shorten so Thevenin's current depends only on series resistance R2.
 
 Thevenin's equivalent resistance is:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_1 + R_2} [\Omega]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_{1} + R_{2}} [\Omega]" >
 
 Worth mentioning: **voltage gain of this system is not Thevenin's resistance!**
 
 Equivalent circuit is made using:
 - new voltage source with Thevenin's voltage value,
-- resitorwith Thevenin's resistance value.
+- resitor with Thevenin's resistance value.
 
 |Equivalent circuit|
 |:-:|
 |<img src="basic_circuit_thevenins_theorem_2.png" alt="" width="500">|
 
-To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin'ss circuit's output voltage is passed from voltage source witout any loss on resistor, becouse of no current flow. So output voltage is simply:
+To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source witout any loss on resistor, becouse of no current flow. So output voltage is simply:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 + R_2} [V]" >
 
 Let's consider how Thevenin's resistance (called output resistance) vary with R1 and how much current circuit can deliver during short circuit:
 
-|R1|Rth|Uth|Iss|
-|:-:|:-:|:-:|:-:|
-|20R|16.7R|0.17V|10mA|
-|100R|50R|0.5V|10mA|
-|1k|90R|0.91V|10mA|
-|10k|99R|0.99V|10mA|
+|R1|Rth|Uth|Iss| P|
+|:-:|:-:|:-:|:-:|:-:|
+|20R|16.7R|0.167V|10mA|1.39mW|
+|100R|50R|0.5V|10mA|2.5mW|
+|1k|91R|0.91V|10mA|0.83mW|
+|10k|99R|0.99V|10mA|0.1mW|
 
-As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those 2) and output voltage also rises sustaining constant short circuit current value.
+As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that short circuit current shorts R1, so only R2 counts to current.
+
+Lower output resistance varies with R1 but it does not mean, that circuit candeliver more power. Lower parallel resistance means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
+
+<img height="50" src="https://render.githubusercontent.com/render/math?math=P = U_{R1} \cdot I_{R1} = \frac{U_{out}^2}{R_1} = \frac{U_{th}^2}{R_1} [W]" >
+
+The most power is transfered when resistances are equal.
+
+Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output like this:
+
+>ilustracja
+
+|R1|Rth|Uth|IR3|Uout|R13| P3|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|20R|16.7R|0.167V|1.43mA|0.143V|16.7R|0.2mW|
+|100R|50R|0.5V|3.33mA|0.33V|50R|1.11mW|
+|1k|91R|0.91V|4.76mA|0.47V|91R|2.27mW|
+|10k|99R|0.99V|4.97mA|0.497V|99R|2.47mW|
+
+Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads.
+
+Rth is 91R and Uth = 0.91V
+
+|R1|R3|R13|IR3|Uout|P3|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|1k|10|9.91R|9.01mA|0.09V|0.81mW|
+|1k|100|90.91R|4.76mA|0.48V|2.28mW|
+|1k|1k|500R|0.83mA|0.83V|0.69mW|
+|1k|10k|909R|0.09mA|0.9V|0.08mW|
 
 # Signal preparation
 
@@ -139,7 +169,7 @@ Now the question is wherher it is a good choice. System looks like this with int
 
 Capacitor reactance which is imaginary part of complex capacitor's impedance is given by formula:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
 
 Generate angular frequency Numpy array:
 
@@ -184,15 +214,15 @@ DC part will be trimmed, cosine part is lets say frozen so that final phasor in 
 
 Output voltage can be find out using voltage divider:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=\bar{U_{th}} = \bar{U}\frac{R_0}{R_0+R_{in}+Z_{C0}} [V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{U_{th}} = \bar{U}\frac{R_0}{R_0+R_{in}+Z_{C0}} [V]" >
 
 During short circuit R0 is excluded and final current is:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=\bar{I_{th}} = \frac{\bar{U}}{R_{in}+Z_{C0}} [A]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{I_{th}} = \frac{\bar{U}}{R_{in}+Z_{C0}} [A]" >
 
 Final Thevenin resistance is:
 
-<img height="30" src="https://render.githubusercontent.com/render/math?math=\bar{Z_{th}} = \frac{\bar{U_{th}}}{\bar{I_{th}}} = \frac{R_0 (R_{in}+Z_{C0})}{R_0+R_{in}+Z_{C0}} [\Omega]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=\bar{Z_{th}} = \frac{\bar{U_{th}}}{\bar{I_{th}}} = \frac{R_0 (R_{in}+Z_{C0})}{R_0+R_{in}+Z_{C0}} [\Omega]" >
 
 ```python
 ZC0 = -1j/(w*C0)
@@ -202,7 +232,7 @@ Z_th = R0 * (Rin + ZC0) / (R0 + Rin + ZC0)
 ```
 Both voltage and current canbe plotted:
 
-|THevenin voltage in V | Thevenin current in A|
+|Thevenin voltage in V | Thevenin current in A|
 |:-------------------------:|:-------------------------:|
 |![](capacitance_1u6F_voltage.png)  |  ![](capacitance_1u6F_voltage_current.png)|
 
