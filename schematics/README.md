@@ -203,9 +203,9 @@ As indicated earlier the load resistance should be much greater than internal re
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
-High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which coresponds to 125664 rad/s.
+High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
 
-As closest resistance to 5k, a 4.7k resistor was choosen.
+As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
 w0 = 125
 R0 = 4700
@@ -308,7 +308,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMTMyMDg2NSw0OTgzOTUxLDExOTg1MD
+eyJoaXN0b3J5IjpbMTEzOTk4ODgyMiw0OTgzOTUxLDExOTg1MD
 U2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5
 LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxND
 k5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2
