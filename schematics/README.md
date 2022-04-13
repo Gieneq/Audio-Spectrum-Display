@@ -13,8 +13,8 @@ When designing blocks of analog filters, several parameters must be considered:
 - phase shift.
 
 Matching output and input impedance is crucial to obtain useful signal, because if:
-- impedance of following block is close to the preceding one then output voltage will be scaled to half of input voltage,
-- impedance of following block is (rule of thumb) 10x greather than preciding impedance, then output voltage will be close to input voltage.
+- impedance of following block is close to the preceding one, then output voltage will be scaled to half of input voltage,
+- impedance of following block is (rule of thumb) 10x greater than preceding impedance, then output voltage will be close to input voltage.
 
 ## Real voltage source
 
@@ -277,6 +277,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDc3Nzc5ODcsLTE3MDQ0MTU1NTBdfQ
+eyJoaXN0b3J5IjpbLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ
 ==
 -->
