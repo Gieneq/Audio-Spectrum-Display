@@ -188,6 +188,8 @@ Selected parameters:
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
+- Measured DC offset: 1.245V,
+- Measured 
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
 - 0.25mA constant current flow,
@@ -304,8 +306,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
-Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
-NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLT
-E3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbMTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNj
+k3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQx
+NjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC
+0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
