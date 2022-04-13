@@ -197,11 +197,7 @@ Selected parameters:
 - Measured DC offset: 1.22V,
 - Measured AC RMS voltage: 0.88V.
 
-As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
-- 0.25mA constant current flow,
-- 0.15mA current amplitude,
-- voltage at the output similar to one at the input,
-- output resistance about 50R.
+As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance.
 
 
 
@@ -312,9 +308,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNzcwNDEzNSwxMTk4NTA1NjAwLC0xND
-E1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0
-NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNC
-w5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0
-NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MD
+E2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1
+LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5OD
+Q4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1
+NTUwXX0=
 -->
