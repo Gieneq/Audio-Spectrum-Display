@@ -128,13 +128,10 @@ Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 
 
 Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two. Knowing that, it is not recommended to use R3 lower than R1, because R3 becomes lower of those two, and lowers significantly overall parallel resistance.
 
-As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher than output resistance of source (Rth), voltage drop at the output reaches voltage of source (Uth).
+As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher than output resistance of source (Rth), voltage drop at the output reaches voltage of source (Uth). So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
 
- starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
-
-R1=1k so whatever resistance value of R3 we will chooseoverall parallel resistance will be less or very close to 1k. The table shows than when chooseing the same value for R3 as R1 overall resistance drop significantly to 0.5k which grants slight voltage drop giving 0.83V onoutput and 1.67mA constant current draw.
-
-So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
+---
+When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance
 
 ## Summary
 
@@ -287,7 +284,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMzU3Nzg5MywtMjAzNDQxNjA1NCwtMj
-A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
-NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTExNTQxOTA1NTIsLTIwMzQ0MTYwNTQsLT
+IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
+MDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
