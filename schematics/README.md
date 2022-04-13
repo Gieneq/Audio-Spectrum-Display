@@ -4,7 +4,7 @@ In this article it will be explained how to choose values of passive components 
 
 # Circuit theory basics
 
-Before touching topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedances.
+Before touching topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedance.
 
 When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
@@ -12,8 +12,8 @@ When designing blocks of analog filters, several parameters must be considered:
 - cutoff frequency,
 - phase shift.
 
-Matching output and input impedance is crucial to obtain usefull signal if:
-- impedance of following block is close to the preciding one then output voltage will be scaled to half of input voltage,
+Matching output and input impedance is crucial to obtain useful signal, because if:
+- impedance of following block is close to the preceding one then output voltage will be scaled to half of input voltage,
 - impedance of following block is (rule of thumb) 10x greather than preciding impedance, then output voltage will be close to input voltage.
 
 ## Real voltage source
@@ -277,5 +277,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI5MDQ4NTA0LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTEyMDc3Nzc5ODcsLTE3MDQ0MTU1NTBdfQ
+==
 -->
