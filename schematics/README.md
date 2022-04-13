@@ -12,7 +12,7 @@ When designing blocks of analog filters, several parameters must be considered:
 - cutoff frequency,
 - phase shift.
 
-Matching output and input impedance is crucial to obtain useful signal, because if:
+**Matching output and input impedance** is crucial to obtain useful signal, because if:
 - impedance of following block is close to the preceding one, then output voltage will be scaled to half of input voltage,
 - impedance of following block is (rule of thumb) 10x greater than preceding impedance, then output voltage will be close to input voltage.
 
@@ -43,19 +43,19 @@ The higher R1 the higher gain or output voltage, but it cannot be cranked up fre
 
 ## Thevenin's Theorem
 
-Thevenin's theorem says that any linear circuit can be replaced by voltage source and resistance (impedance in general) that behaves in the same way. Equivalent circuit can be modelled using **open circuit voltage** and **short circuit current**.
+Thevenin's theorem says that any linear circuit can be replaced by voltage source and resistance (impedance in general) that behaves in the same way. Equivalent circuit can be modeled using **open circuit voltage** and **short circuit current**.
 
-Open circuit voltage can be obtained from voltage divider:
+**Open circuit voltage** can be obtained from voltage divider:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
-Then short circuit current is given by formula:
+Then **short circuit current** is given by formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=I_{th} = \frac{U_{in}}{R_2} [A]" >
 
-R1 is shorten so Thevenin's current depends only on series resistance R2.
+R1 is shorten so Thevenin's current depends only on **series resistance R2**.
 
-Thevenin's equivalent resistance is:
+The Thevenin's equivalent resistance is:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_{1} \!%2B\! R_{2}} [\Omega]" >
 
@@ -279,6 +279,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NDAxMDQxMCwtMTc2MDc5NjY1OSwtMT
-cwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNz
+A0NDE1NTUwXX0=
 -->
