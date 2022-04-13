@@ -1,14 +1,10 @@
 # Electronics
 
-|BLock schematic of Audio Spectrum Display V1.0 |
-|:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
-
-In this article It will be explained how to choose values of passive components to process signal before being sampled by ADC.
+In this article it will be explained how to choose values of passive components to process signal from audio source before being sampled by ADC.
 
 # Circuit theory basics
 
-Before analysing about real circuit, several words about the circuit theory must be written. When considering resistive load those rules can be applied more generally to impedances.
+Before moving to the topic of real circuit, several words about the circuit theory must be written.
 
 When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
@@ -16,9 +12,9 @@ When designing blocks of analog filters, several parameters must be considered:
 - cutoff frequency,
 - phase shift.
 
-Matching output and input impedance is crucial to obtain usefull signal if:
-- impedance of following block is close to the preciding one then output voltage will be scaled to half of input voltage,
-- impedance of following block is (rule of thumb) 10x greather than preciding impedance, then output voltage will be close to input voltage.
+**Matching output and input impedance** is crucial to obtain useful signal, because if:
+- impedance of following block is close to the preceding one, then output voltage will be scaled to half of input voltage,
+- impedance of following block is (rule of thumb) 10x greater than preceding impedance, then output voltage will be close to input voltage.
 
 ## Real voltage source
 
@@ -26,9 +22,11 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 |Simple real voltage source with resistive load|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_1.png" alt="" width="500">|
+|<img src="basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
 
-Output voltage is described by voltage divider, so gain (ratio of output and input voltages) is given by formula:
+When considering resistive load rules can be applied more generally to impedance.
+
+Output voltage is described using voltage divider, so gain (ratio of output and input voltages) is given by formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R_2} [\frac{V}{V}]" >
 
@@ -41,23 +39,23 @@ Let's see how gain changes with R1:
 |100R|1k|10x|0.91|
 |100R|10k|100x|0.99|
 
-The higher R1 the higher gain or output voltage, but it cannot be cranced up freely – output impedance must be considered and impedance of.
+The higher R1 the higher gain or output voltage, but it cannot be cranked up freely – output impedance of source and input impedance of receiver must be considered.
 
 ## Thevenin's Theorem
 
-Thevenin's theorem says that any linear circuit can be reaplaced by voltage source and resistance (impedance in generall) that behaves in the same way. Equivalent circuit can be modelled using **open circuit voltage** and **short circuit current**.
+Thevenin's theorem says that any linear circuit can be replaced by voltage source and resistance (impedance in general) that behaves in the same way. Equivalent circuit can be modeled using **open circuit voltage** and **short circuit current**.
 
-Open circuit voltage can be obtained from voltage divider:
+**Open circuit voltage** can be obtained from voltage divider:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
-Then short circuit current is given by formula:
+Then **short circuit current** is given by formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=I_{th} = \frac{U_{in}}{R_2} [A]" >
 
-R1 is shorten so Thevenin's current depends only on series resistance R2.
+R1 is shorten so Thevenin's current depends only on **series resistance R2**.
 
-Thevenin's equivalent resistance is:
+The Thevenin's equivalent resistance is:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=R_{th} = \frac{U_{th}}{I_{th}} = \frac{R_1 \cdot R_2}{R_{1} \!%2B\! R_{2}} [\Omega]" >
 
@@ -65,13 +63,13 @@ Worth mentioning: **voltage gain of this system is not Thevenin's resistance!**
 
 Equivalent circuit is made using:
 - new voltage source with Thevenin's voltage value,
-- resitor with Thevenin's resistance value.
+- resistor with Thevenin's resistance value.
 
 |Equivalent circuit|
 |:-:|
 |<img src="basic_circuit_thevenins_theorem_2.png" alt="" width="500">|
 
-To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source witout any loss on resistor, becouse of no current flow. So output voltage is simply:
+To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source without any loss on resistor, because of no current flow. So output voltage is simply:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
@@ -84,23 +82,25 @@ Let's consider how Thevenin's resistance (called output resistance) vary with R1
 |1k|91R|0.91V|10mA|0.83mW|
 |10k|99R|0.99V|10mA|0.1mW|
 
-As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that when R1 is sorted, so only R2 counts to the current.
+As R1 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parallel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with the fact that R1 is shorted, so only R2 counts to the current.
 
-Output resistance varies with R1 changing. Lower output resistance does not mean, that circuit can deliver more power, becouse despite lower parallel resistance means more current flow it also means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
+Output resistance varies with R1. Lower output resistance does not mean, that circuit can deliver more power. Despite lower parallel resistance and more current flow, there is lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=P = U_{R1} \cdot I_{R1} = \frac{U_{out}^2}{R_1} = \frac{U_{th}^2}{R_1} [W]" >
 
-The most power is transfered when resistances are equal.
+The most power is transferred when R1 and R2 are equal.
 
-Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output:
+---
+
+Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R connector to the circuit's output:
 
 |Circuit with R3 added|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_3.png" alt="" width="500">|
+|<img src="basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
 
-Becouse Thevenin's resistance of R1 and R2 circuit cannot exceed 99R, most power will be transfered when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
+The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit) and thus not influencing parallel connection of R1 and R3. 
 
-So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
+So when connecting several blocks, impedance of all blocks should be considered. In general we are limited by 2 impedances:
 - source output impedance e.g. 50R,
 - receiver impedance e.g. 100k.
 
@@ -111,9 +111,11 @@ So when connecting several blocks, impedance of all blocks should be considered.
 |1k|91R|0.91V|4.76mA|0.47V|91R|2.27mW|
 |10k|99R|0.99V|4.97mA|0.497V|99R|2.47mW|
 
-In most cases receivers are buffer circuits made out of op-amps with high input impedance and low output impedance. So to sustainhigh quality signal all processing blocks shoudld be spread scross min and max impedances.
+In most cases receivers are buffer circuits made out of op-amps with high input impedance and low output impedance. So to sustain high quality signal all processing blocks should be spread across minimum and maximum impedances.
 
-When audio signall passes to ADC it is required to know how ADC processes signal and thus the current draw.
+When audio signal passes to ADC it is required to know how ADC processes signal and thus find out required current draw.
+
+---
 
 Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 91R and Uth = 0.91V.
 
@@ -124,17 +126,34 @@ Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 
 |1k|1k|500R|0.83mA|0.83V|0.69mW|
 |1k|10k|909R|0.09mA|0.9V|0.08mW|
 
-Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two, so knowing that starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
+Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two. Knowing that, it is not recommended to use R3 lower than R1, because R3 becomes lower of those two, and lowers significantly overall parallel resistance.
 
-R1=1k so whatever resistance value of R3 we will chooseoverall parallel resistance will be less or very close to 1k. The table shows than when chooseing the same value for R3 as R1 overall resistance drop significantly to 0.5k which grants slight voltage drop giving 0.83V onoutput and 1.67mA constant current draw.
+As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher than output resistance of source (Rth), voltage drop at the output reaches voltage of source (Uth). So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
 
-So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
+---
+|Real voltage source with 2 parallel loads|
+|:-:|
+|<img src="thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
+
+When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. The resulting impedance will be **less than the least resistance in parallel** and **greater than least resistance in parallel divided by number of resistors in total**.
+
+Assuming Thevenin's voltage value can be harder because it requires concerning 3 cases:
+
+|Assumption helping in estimating impedances values|
+|:-:|
+|<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
+
+Breaking point of voltage is when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
 
 ## Summary
 
 When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
-- Chained blocks should have increasing impedance - by factor 10 should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest parallel impedance.
+- Chained blocks should have increasing impedance - factor of 10x should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest of all impedance.
+
+|BLock schematic of Audio Spectrum Display V1.0 |
+|:-:|
+|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
 
 # Signal preparation
 
@@ -147,11 +166,13 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 |V RMS|0.54|0.84|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
-Becouse of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB not reaching top ampllitude of audio jack. It is not crucial, becouse then commom preamplifier will be added.
+Because of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB with option to change gain in case of clipping.
 
 |Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
 |:-------------------------:|:-------------------------:|
 |![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
+
+As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not vital. Both signals will be amplified before passing to ADC.
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -274,3 +295,9 @@ Coming coon
 
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMj
+AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
+NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
+19
+-->
