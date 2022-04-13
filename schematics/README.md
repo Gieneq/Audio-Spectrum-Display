@@ -188,10 +188,13 @@ Selected parameters:
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
+
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
 - 0.25mA constant current flow,
 - 0.15mA current amplitude,
 - voltage at the output similar to one at the input.
+
+
 
 ## Filter design
 
@@ -300,8 +303,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2MDg2NjYzLDI2OTc3OTc2NywtMTY0NT
-kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
-MjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNz
-YwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbMTczNjU1ODAxMywyNjk3Nzk3NjcsLTE2ND
+U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
+MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
+c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
