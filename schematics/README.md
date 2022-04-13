@@ -96,7 +96,7 @@ Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R
 |:-:|
 |<img src="basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
 
-The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit). It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
+The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit) and thus not influencing parallel connection of R1 and R3. 
 
 So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
 - source output impedance e.g. 50R,
@@ -279,7 +279,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTY3MjAyNSwtMjAzNDQxNjA1NCwtMj
-A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
-NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTExMjg1MjM2MDcsLTIwMzQ0MTYwNTQsLT
+IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
+MDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
