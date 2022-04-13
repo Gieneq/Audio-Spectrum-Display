@@ -177,10 +177,10 @@ Voltage parameters were gathered and comapred in table:
 |:-|:-:|:-:|
 |DC offset|1.22V|Symetrical 0V|
 |Amplitude|1.245V|1.185V|
-|V RMS|0.86V|0.84V|
+|V RMS|0.88V|0.84V|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
-Signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to lower gain in case of clipping. RMS voltage value is similar to audio jack input.
+Signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to lower gain in case of clipping. RMS voltage value is similar to audio jack input, a bit higher which combines well with damping of passive filter.
 
 ## MAX9814 microphone
 
@@ -195,7 +195,7 @@ Selected parameters:
 - Max capacitive load: 200pF
 - Max output current 2mA
 - Measured DC offset: 1.22V,
-- Measured 
+- Measured AC RMS voltage: 0.88V.
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
 - 0.25mA constant current flow,
@@ -312,9 +312,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjQ2NjM1NDksMTE5ODUwNTYwMCwtMT
-QxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1
-NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3Mz
-QsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcw
-NDQxNTU1MF19
+eyJoaXN0b3J5IjpbMTAzNzcwNDEzNSwxMTk4NTA1NjAwLC0xND
+E1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0
+NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNC
+w5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0
+NDE1NTUwXX0=
 -->
