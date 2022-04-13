@@ -134,7 +134,7 @@ When chaining filter blocks the following tips should be considered:
 
 |BLock schematic of Audio Spectrum Display V1.0 |
 |:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
+|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
 
 # Signal preparation
 
@@ -276,3 +276,6 @@ Coming coon
 
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3MDQ0MTU1NTBdfQ==
+-->
