@@ -141,7 +141,8 @@ When looking at real voltage source with series impedance and several parallel i
 |:-:|
 |<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
-Assuming Thevenin's voltage value can be harder
+Assuming Thevenin's voltage value can be harder because it requires concerning 3 cases:
+
 
 ## Summary
 
@@ -294,8 +295,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA2MDI0OTMsLTQzNjc1NDYwNSwtMj
-AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
-NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
-19
+eyJoaXN0b3J5IjpbMTUzMDk0NTk4NCwtNDM2NzU0NjA1LC0yMD
+M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
+MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX
+0=
 -->
