@@ -4,7 +4,7 @@ In this article it will be explained how to choose values of passive components 
 
 # Circuit theory basics
 
-Before moving to the topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedance.
+Before moving to the topic of real circuit, several words about the circuit theory must be written.
 
 When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
@@ -22,9 +22,11 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 |Simple real voltage source with resistive load|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_1.png" alt="" width="500">|
+|<img src="basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
 
-Output voltage is described by voltage divider, so gain (ratio of output and input voltages) is given by formula:
+When considering resistive load rules can be applied more generally to impedance.
+
+Output voltage is described using voltage divider, so gain (ratio of output and input voltages) is given by formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R_2} [\frac{V}{V}]" >
 
@@ -277,6 +279,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwOTU4Njk2LC0xNzYwNzk2NjU5LC0xNz
-A0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTEzNTgxODQyNzAsLTE3NjA3OTY2NTksLT
+E3MDQ0MTU1NTBdfQ==
 -->
