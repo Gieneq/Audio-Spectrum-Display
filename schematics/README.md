@@ -90,6 +90,8 @@ Output resistance varies with R1. Lower output resistance does not mean, that ci
 
 The most power is transferred when R1 and R2 are equal.
 
+---
+
 Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R connector to the circuit's output:
 
 |Circuit with R3 added|
@@ -124,7 +126,7 @@ Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 
 |1k|1k|500R|0.83mA|0.83V|0.69mW|
 |1k|10k|909R|0.09mA|0.9V|0.08mW|
 
-Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two, so knowing that starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
+Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two. Knowing that starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
 
 R1=1k so whatever resistance value of R3 we will chooseoverall parallel resistance will be less or very close to 1k. The table shows than when chooseing the same value for R3 as R1 overall resistance drop significantly to 0.5k which grants slight voltage drop giving 0.83V onoutput and 1.67mA constant current draw.
 
@@ -281,7 +283,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDgzNjU4ODksLTIwMzQ0MTYwNTQsLT
-IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
-MDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbMTg3NTA0MTkxMiwtMjAzNDQxNjA1NCwtMj
+A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
+NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
