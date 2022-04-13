@@ -1,9 +1,5 @@
 # Electronics
 
-|BLock schematic of Audio Spectrum Display V1.0 |
-|:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
-
 In this article It will be explained how to choose values of passive components to process signal before being sampled by ADC.
 
 # Circuit theory basics
@@ -136,6 +132,10 @@ When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
 - Chained blocks should have increasing impedance - by factor 10 should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest parallel impedance.
 
+|BLock schematic of Audio Spectrum Display V1.0 |
+|:-:|
+|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
+
 # Signal preparation
 
 Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similiar, but only microphone signal can be modified due to plug switching.
@@ -147,11 +147,13 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 |V RMS|0.54|0.84|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
-Becouse of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB not reaching top ampllitude of audio jack. It is not crucial, becouse then commom preamplifier will be added.
+Becouse of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB with option to change gain in case of clipping.
 
 |Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
 |:-------------------------:|:-------------------------:|
 |![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
+
+As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not vital. Both signals will be amplified before passing to ADC.
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
