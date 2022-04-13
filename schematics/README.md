@@ -215,7 +215,13 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is avaiable, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is 
+Because 2.2uF capacitor is avaiable, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is 96rad/s:
+```python
+C0 = 2.2e-06
+w0 = 1/(R0*C0)
+print(w0)
+```
+>96.71179883945841
 
 
 Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
@@ -311,9 +317,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MzI4NTYyNyw0OTgzOTUxLDExOTg1MD
-U2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5
-LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxND
-k5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2
-NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbOTQ5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNT
+YwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTks
+LTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OT
+k1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1
+OSwtMTcwNDQxNTU1MF19
 -->
