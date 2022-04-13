@@ -188,8 +188,9 @@ Selected parameters:
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
+As indicated earlier the load resistance should be much 
 
-## Filter d
+## Filter design
 
 High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which coresponds to 125664 rad/s.
 
@@ -296,8 +297,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2Njg2NzkwMywyNjk3Nzk3NjcsLTE2ND
-U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
-MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
-c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTcxMzAxNzc1LDI2OTc3OTc2NywtMTY0NT
+kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
+MjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNz
+YwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
 -->
