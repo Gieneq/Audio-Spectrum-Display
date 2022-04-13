@@ -165,6 +165,12 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 |:-------------------------:|:-------------------------:|
 |![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
 
+In practive signal from microphone (as stated in datasheet) can be much higher:
+
+|Block schematic of Audio Spectrum Display V1.0 |
+|:-:|
+|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
+
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
 |DC offset|1.245V|Symetrical 0V|
@@ -308,9 +314,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTAwNDc5OSwxMTk4NTA1NjAwLC0xND
-E1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0
-NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNC
-w5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0
-NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTE0NTQ0Mzk5NjEsMTE5ODUwNTYwMCwtMT
+QxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1
+NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3Mz
+QsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcw
+NDQxNTU1MF19
 -->
