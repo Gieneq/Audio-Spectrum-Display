@@ -4,7 +4,7 @@ In this article it will be explained how to choose values of passive components 
 
 # Circuit theory basics
 
-Before touching topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedance.
+Before moving to the topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedance.
 
 When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
@@ -277,6 +277,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ
-==
+eyJoaXN0b3J5IjpbMjUwOTU4Njk2LC0xNzYwNzk2NjU5LC0xNz
+A0NDE1NTUwXX0=
 -->
