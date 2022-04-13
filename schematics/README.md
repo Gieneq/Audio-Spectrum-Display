@@ -1,6 +1,6 @@
 # Electronics
 
-In this article It will be explained how to choose values of passive components to process signal before being sampled by ADC.
+In this article it will be explained how to choose values of passive components to process signal before being sampled by ADC.
 
 # Circuit theory basics
 
@@ -277,6 +277,5 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQ0MTU1NTAsLTE3MDQ0MTU1NTBdfQ
-==
+eyJoaXN0b3J5IjpbLTY3OTUzMjgzMCwtMTcwNDQxNTU1MF19
 -->
