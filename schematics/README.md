@@ -69,7 +69,7 @@ Equivalent circuit is made using:
 |:-:|
 |<img src="basic_circuit_thevenins_theorem_2.png" alt="" width="500">|
 
-To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source witout any loss on resistor, becouse of no current flow. So output voltage is simply:
+To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source without any loss on resistor, because of no current flow. So output voltage is simply:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{th} = U_{in}\frac{R_1}{R_1 \!%2B\! R_2} [V]" >
 
@@ -279,6 +279,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MD
-c5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1Nj
+A4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
 -->
