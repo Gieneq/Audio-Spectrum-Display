@@ -131,7 +131,13 @@ Again, when connecting resistors in parallel (in this case R1 and R3) final resi
 As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher than output resistance of source (Rth), voltage drop at the output reaches voltage of source (Uth). So again by the rule of thumb 10 times greater resistance for R3 should be choosen. Then overall current draw will be much less (0.99mA) and output voltage is closer to input voltage (0.9V).
 
 ---
+|Real voltage source with 2 parallel loads|
+|:-:|
+|<img src="thevenin_conversion_1.png" alt="Circuit with R3 added" width="500">|
+
 When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. **The resulting impedance will be less than the least resistance in parallel.**
+
+
 
 ## Summary
 
@@ -284,7 +290,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM2ODYyMzksLTQzNjc1NDYwNSwtMj
+eyJoaXN0b3J5IjpbLTE4Nzg5MzIwNTAsLTQzNjc1NDYwNSwtMj
 AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
 NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
 19
