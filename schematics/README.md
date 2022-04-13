@@ -215,7 +215,7 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is avaiable, it will be choosen. Then new 
+Because 2.2uF capacitor is avaiable, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 
 
 
 Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
@@ -311,7 +311,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjM3MDY3Niw0OTgzOTUxLDExOTg1MD
+eyJoaXN0b3J5IjpbMTgwNDUxNjkzMiw0OTgzOTUxLDExOTg1MD
 U2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5
 LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxND
 k5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2
