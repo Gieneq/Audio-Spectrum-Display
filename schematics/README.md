@@ -63,7 +63,7 @@ Worth mentioning: **voltage gain of this system is not Thevenin's resistance!**
 
 Equivalent circuit is made using:
 - new voltage source with Thevenin's voltage value,
-- resitor with Thevenin's resistance value.
+- resistor with Thevenin's resistance value.
 
 |Equivalent circuit|
 |:-:|
@@ -279,6 +279,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNz
-A0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MD
+c5NjY1OSwtMTcwNDQxNTU1MF19
 -->
