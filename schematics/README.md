@@ -197,10 +197,7 @@ Selected parameters:
 - Measured DC offset: 1.22V,
 - Measured AC RMS voltage: 0.88V.
 
-As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. So module of filter impedance cannot drop below 5k.
-Pointer 200pF max capacitive load 
-
-
+As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
 
 ## Filter design
 
@@ -309,9 +306,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDkzMTE3NjUsNDk4Mzk1MSwxMTk4NT
-A1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjEx
-OSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMT
-Q5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2
-NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbNjM0MTAwNTk5LDQ5ODM5NTEsMTE5ODUwNT
+YwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTks
+LTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OT
+k1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1
+OSwtMTcwNDQxNTU1MF19
 -->
