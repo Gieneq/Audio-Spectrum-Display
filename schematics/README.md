@@ -16,7 +16,7 @@ When designing blocks of analog filters, several parameters must be considered:
 - cutoff frequency,
 - phase shift.
 
-Matching output and input impedance is crucial to obtain usefull signal – if:
+Matching output and input impedance is crucial to obtain usefull signal if:
 - impedance of following block is close to the preciding one then output voltage will be scaled to half of input voltage,
 - impedance of following block is (rule of thumb) 10x greather than preciding impedance, then output voltage will be close to input voltage.
 
@@ -94,9 +94,11 @@ The most power is transfered when resistances are equal.
 
 Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output:
 
->ilustracja
+|Circuit with R3 added|
+|:-:|
+|<img src="basic_circuit_thevenins_theorem_3.png" alt="" width="500">|
 
-Becouse Thevenin's restance of R1 and R2 circuit cannot exceed 99R, most power will be transfered when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
+Becouse Thevenin's resistance of R1 and R2 circuit cannot exceed 99R, most power will be transfered when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
 
 So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
 - source output impedance e.g. 50R,
@@ -133,7 +135,6 @@ So again by the rule of thumb 10 times greater resistance for R3 should be choos
 When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
 - Chained blocks should have increasing impedance - by factor 10 should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest parallel impedance.
-- 
 
 # Signal preparation
 
@@ -141,8 +142,9 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
-|DC offset|1.2V|Symetrical 0V|
-|Amplitude|0.76V|1.11V|
+|DC offset|1.245V|Symetrical 0V|
+|Amplitude|0.765V|1.185V|
+|V RMS|0.54|0.84|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
 Becouse of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB not reaching top ampllitude of audio jack. It is not crucial, becouse then commom preamplifier will be added.
