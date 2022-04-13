@@ -154,7 +154,7 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 |V RMS|0.54|0.84|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
-Becouse of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB with option to change gain in case of clipping.
+Because of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB with option to change gain in case of clipping.
 
 |Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
 |:-------------------------:|:-------------------------:|
@@ -284,7 +284,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMj
-A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
-NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTEyNjM2ODYyMzksLTQzNjc1NDYwNSwtMj
+AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
+NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
+19
 -->
