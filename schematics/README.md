@@ -39,11 +39,11 @@ Let's see how gain changes with R1:
 |100R|1k|10x|0.91|
 |100R|10k|100x|0.99|
 
-The higher R1 the higher gain or output voltage, but it cannot be cranced up freely – output impedance must be considered and impedance of.
+The higher R1 the higher gain or output voltage, but it cannot be cranked up freely – output impedance of source and input impedance of receiver must be considered.
 
 ## Thevenin's Theorem
 
-Thevenin's theorem says that any linear circuit can be reaplaced by voltage source and resistance (impedance in generall) that behaves in the same way. Equivalent circuit can be modelled using **open circuit voltage** and **short circuit current**.
+Thevenin's theorem says that any linear circuit can be replaced by voltage source and resistance (impedance in general) that behaves in the same way. Equivalent circuit can be modelled using **open circuit voltage** and **short circuit current**.
 
 Open circuit voltage can be obtained from voltage divider:
 
@@ -279,6 +279,6 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgxODQyNzAsLTE3NjA3OTY2NTksLT
-E3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbLTU1NDAxMDQxMCwtMTc2MDc5NjY1OSwtMT
+cwNDQxNTU1MF19
 -->
