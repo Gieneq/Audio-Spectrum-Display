@@ -176,22 +176,20 @@ Because of that, signal from microphone should be **high pass filtered** to **re
 
 As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not crucial. Both signals will be amplified before passing to ADC.
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 ## MAX9814 microphone
 
 Links:
 - [Analog Devices IC - MAX9814 datasheet](https://datasheets.maximintegrated.com/en/ds/MAX9814.pdf)
 - [Adafruit Module: schematic, EAGLE files](https://github.com/adafruit/Adafruit-MAX9814-AGC-Microphone-PCB)
 
-Crucial parameters:
+Selected parameters:
 - Supply Voltage: 2.7V to 5.5V 
 - Zout: 50R
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
 
-## High pass microphone signal
+## Filter d
 
 High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which coresponds to 125664 rad/s.
 
@@ -298,8 +296,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE4MTA5ODQsMjY5Nzc5NzY3LC0xNj
-Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
-NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLT
-E3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbLTI2Njg2NzkwMywyNjk3Nzk3NjcsLTE2ND
+U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
+MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
+c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
