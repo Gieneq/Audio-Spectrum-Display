@@ -153,13 +153,13 @@ When chaining filter blocks the following tips should be considered:
 
 # Signal preparation
 
-Audio signal source can be delivered from both micro
+Audio signal source can be delivered from both microphone or audio jack:
 
 |Block schematic of Audio Spectrum Display V1.0 |
 |:-:|
 |<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
 
-Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similiar, but only microphone signal can be modified due to plug switching.
+Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similar. Only way to make those signals l
 
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
@@ -298,7 +298,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTE3OTUxMCwyNjk3Nzk3NjcsLTE2ND
+eyJoaXN0b3J5IjpbMTQ5NjMwNDI4MywyNjk3Nzk3NjcsLTE2ND
 U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
 MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
 c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
