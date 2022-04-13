@@ -126,7 +126,9 @@ Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 
 |1k|1k|500R|0.83mA|0.83V|0.69mW|
 |1k|10k|909R|0.09mA|0.9V|0.08mW|
 
-Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two. Knowing that, it is not recommended to use R3 lower than R1, because R3 becomes lower of those two 
+Again, when connecting resistors in parallel (in this case R1 and R3) final resistance will be smaller than the smaller value of those two. Knowing that, it is not recommended to use R3 lower than R1, because R3 becomes lower of those two, and lowers significantly overall parallel resistance.
+
+As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher than 
 
  starting internal resistance (R2) is 100R or resistance after first Thevenin's Theorem application (91R) we can see that R3=100R will grant high power transfer.
 
@@ -285,7 +287,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI1MzczOTcsLTIwMzQ0MTYwNTQsLT
-IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
-MDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbMTQ4MzM1MzM0NSwtMjAzNDQxNjA1NCwtMj
+A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
+NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
