@@ -153,13 +153,17 @@ When chaining filter blocks the following tips should be considered:
 
 # Signal preparation
 
-Audio signal source can be delivered from both microphone or audio jack:
+Audio signal can be delivered from both **microphone** or **audio jack**:
 
 |Block schematic of Audio Spectrum Display V1.0 |
 |:-:|
 |<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
 
-Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similar. Only way to make those signals look similar is to add filter between microphone output and switching socket.
+Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket (having mechanical switch). So both signals from microphone and audio jack should be similar. Only way to make those signals look similar is to add filter between microphone output and switching socket.
+
+|Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
+|:-------------------------:|:-------------------------:|
+|![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
 
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
@@ -170,9 +174,7 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 
 Because of that, signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to change gain in case of clipping.
 
-|Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
-|:-------------------------:|:-------------------------:|
-|![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
+
 
 As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not crucial. Both signals will be amplified before passing to ADC.
 
@@ -306,8 +308,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNj
-k3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQx
-NjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC
-0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbMjAwOTAwNDc5OSwxMTk4NTA1NjAwLC0xND
+E1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0
+NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNC
+w5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0
+NDE1NTUwXX0=
 -->
