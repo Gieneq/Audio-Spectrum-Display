@@ -157,7 +157,7 @@ Audio signal can be delivered from both **microphone** or **audio jack**:
 
 |Block schematic of Audio Spectrum Display V1.0 |
 |:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
+|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
 
 Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket (having mechanical switch). So both signals from microphone and audio jack should be similar. Only way to make those signals look similar is to add filter between microphone output and switching socket.
 
@@ -165,11 +165,13 @@ Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 
 |:-------------------------:|:-------------------------:|
 |![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
 
-In practive signal from microphone (as stated in datasheet) can be much higher:
+In practice signal from microphone (as stated in datasheet) can be much higher:
 
-|Block schematic of Audio Spectrum Display V1.0 |
+|Knocking near microphone - maximal amplitude achieved|
 |:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
+|<img src="micro_knock_high.BMP" alt="" width="500">|
+
+Voltage parameters were gathered and comapred in table:
 
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
@@ -314,7 +316,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTQ0Mzk5NjEsMTE5ODUwNTYwMCwtMT
+eyJoaXN0b3J5IjpbLTExNDI2MjUyNDYsMTE5ODUwNTYwMCwtMT
 QxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1
 NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3Mz
 QsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcw
