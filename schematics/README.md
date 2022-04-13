@@ -82,7 +82,7 @@ Let's consider how Thevenin's resistance (called output resistance) vary with R1
 |1k|91R|0.91V|10mA|0.83mW|
 |10k|99R|0.99V|10mA|0.1mW|
 
-As R2 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parralel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that when R1 is sorted, so only R2 counts to the current.
+As R1 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parallel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with fact that when R1 is sorted, so only R2 counts to the current.
 
 Output resistance varies with R1 changing. Lower output resistance does not mean, that circuit can deliver more power, becouse despite lower parallel resistance means more current flow it also means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
 
@@ -279,6 +279,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1Nj
-A4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTIwNDk0NjMyNywxNDk5NTA2NzM0LDk4ND
+g0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1
+NTBdfQ==
 -->
