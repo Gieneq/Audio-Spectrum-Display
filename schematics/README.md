@@ -98,7 +98,7 @@ Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R
 
 The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit) and thus not influencing parallel connection of R1 and R3. 
 
-So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
+So when connecting several blocks, impedance of all blocks should be considered. In general we are limited by 2 impedances:
 - source output impedance e.g. 50R,
 - receiver impedance e.g. 100k.
 
@@ -109,9 +109,11 @@ So when connecting several blocks, impedance of all blocks should be considered.
 |1k|91R|0.91V|4.76mA|0.47V|91R|2.27mW|
 |10k|99R|0.99V|4.97mA|0.497V|99R|2.47mW|
 
-In most cases receivers are buffer circuits made out of op-amps with high input impedance and low output impedance. So to sustainhigh quality signal all processing blocks shoudld be spread scross min and max impedances.
+In most cases receivers are buffer circuits made out of op-amps with high input impedance and low output impedance. So to sustain high quality signal all processing blocks should be spread across minimum and maximum impedances.
 
-When audio signall passes to ADC it is required to know how ADC processes signal and thus the current draw.
+When audio signal passes to ADC it is required to know how ADC processes signal and thus find out required current draw.
+
+---
 
 Now let's pick R2 = 100R, R1 = 1k and connect several R3 loads. As before Rth = 91R and Uth = 0.91V.
 
@@ -279,7 +281,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg1MjM2MDcsLTIwMzQ0MTYwNTQsLT
+eyJoaXN0b3J5IjpbLTE2NDgzNjU4ODksLTIwMzQ0MTYwNTQsLT
 IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
 MDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
