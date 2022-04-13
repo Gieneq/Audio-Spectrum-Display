@@ -151,11 +151,13 @@ When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
 - Chained blocks should have increasing impedance - factor of 10x should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest of all impedance.
 
-|BLock schematic of Audio Spectrum Display V1.0 |
+# Signal preparation
+
+Audio signal source can be delivered from both micro
+
+|Block schematic of Audio Spectrum Display V1.0 |
 |:-:|
 |<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
-
-# Signal preparation
 
 Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similiar, but only microphone signal can be modified due to plug switching.
 
@@ -296,8 +298,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
-Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
-NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLT
-E3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbLTEzMTE3OTUxMCwyNjk3Nzk3NjcsLTE2ND
+U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
+MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
+c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
