@@ -176,8 +176,8 @@ Voltage parameters were gathered and comapred in table:
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
 |DC offset|1.245V|Symetrical 0V|
-|Amplitude|0.765V|1.185V|
-|V RMS|0.54|0.84|
+|Amplitude|1.22V|1.185V|
+|V RMS|0.86V|0.84V|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
 Because of that, signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to change gain in case of clipping.
@@ -316,7 +316,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDI2MjUyNDYsMTE5ODUwNTYwMCwtMT
+eyJoaXN0b3J5IjpbLTE4MDE1NDkxMDYsMTE5ODUwNTYwMCwtMT
 QxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1
 NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3Mz
 QsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcw
