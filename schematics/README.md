@@ -192,7 +192,8 @@ Selected parameters:
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
 - 0.25mA constant current flow,
 - 0.15mA current amplitude,
-- voltage at the output similar to one at the input.
+- voltage at the output similar to one at the input,
+- output resistance about 50R.
 
 
 
@@ -303,8 +304,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjU1ODAxMywyNjk3Nzk3NjcsLTE2ND
-U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
-MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
-c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
+Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
+NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLT
+E3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
