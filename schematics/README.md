@@ -137,12 +137,13 @@ As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher
 
 When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. The resulting impedance will be **less than the least resistance in parallel** and **greater than least resistance in parallel divided by number of resistors in total**.
 
+Assuming Thevenin's voltage value can be harder because it requires concerning 3 cases:
+
 |Assumption helping in estimating impedances values|
 |:-:|
 |<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
-Assuming Thevenin's voltage value can be harder because it requires concerning 3 cases:
-
+Breaking point of voltage is when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
 
 ## Summary
 
@@ -295,7 +296,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMDk0NTk4NCwtNDM2NzU0NjA1LC0yMD
+eyJoaXN0b3J5IjpbMTE5MjUwNjEwNiwtNDM2NzU0NjA1LC0yMD
 M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
 MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX
 0=
