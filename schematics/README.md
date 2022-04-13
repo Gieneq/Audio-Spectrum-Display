@@ -96,7 +96,7 @@ Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R
 |:-:|
 |<img src="basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
 
-Because Thevenin's resistance of R1 and R2 circuit cannot exceed 99R, most power will be transfered when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
+Because Thevenin's resistance of R1 and R2 circuit cannot exceed 100R (R2), the most power will be transferred when R1 is high. It depicts that connecting load (R3) that's value is lower than R1 can bring more power losses especially when it is close to overall output impedance.
 
 So when connecting several blocks, impedance of all blocks should be considered. In most cases we are limited by 2 impedances:
 - source output impedance e.g. 50R,
@@ -279,7 +279,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNzM5MDQzMCwtMjAzNDQxNjA1NCwtMj
+eyJoaXN0b3J5IjpbMTU4ODA5NDAwOSwtMjAzNDQxNjA1NCwtMj
 A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
 NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
