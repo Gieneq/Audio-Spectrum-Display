@@ -149,7 +149,7 @@ Breaking point of voltage is when resistance replacing parallel connection is eq
 
 When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
-- Chained blocks should have increasing impedance - by factor 10 should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest parallel impedance.
+- Chained blocks should have increasing impedance - factor of 10x should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest of all impedance.
 
 |BLock schematic of Audio Spectrum Display V1.0 |
 |:-:|
@@ -296,8 +296,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjUwNjEwNiwtNDM2NzU0NjA1LC0yMD
-M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
-MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX
-0=
+eyJoaXN0b3J5IjpbLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMj
+AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
+NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
+19
 -->
