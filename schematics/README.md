@@ -84,11 +84,11 @@ Let's consider how Thevenin's resistance (called output resistance) vary with R1
 
 As R1 rises, Thevenin's resistance rises to limit given by R2 (R1 is in parallel to R2 so total resistance will never exceed lower of those two) and output voltage also rises sustaining constant short circuit current value. Constant 10mA is consistent with the fact that R1 is shorted, so only R2 counts to the current.
 
-Output resistance varies with R1 changing. Lower output resistance does not mean, that circuit can deliver more power, becouse despite lower parallel resistance means more current flow it also means lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
+Output resistance varies with R1. Lower output resistance does not mean, that circuit can deliver more power. Despite lower parallel resistance and more current flow, there is lower voltage drop on output. When power deliver to output will be maximised? The table shows power draw by R1 which is evaluated based on power formula:
 
 <img height="50" src="https://render.githubusercontent.com/render/math?math=P = U_{R1} \cdot I_{R1} = \frac{U_{out}^2}{R_1} = \frac{U_{th}^2}{R_1} [W]" >
 
-The most power is transfered when resistances are equal.
+The most power is transferred when R1 and R2 are equal.
 
 Now let's consider equivalent Thevenin's circuit with another 100R resistor connector to the circuit's output:
 
@@ -279,7 +279,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxND
-k5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2
-NTksLTE3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbLTY3MDk2NjE3NCwtMjAzNDQxNjA1NCwtMj
+A0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEw
+NSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF19
 -->
