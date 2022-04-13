@@ -133,11 +133,13 @@ As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher
 ---
 |Real voltage source with 2 parallel loads|
 |:-:|
-|<img src="thevenin_conversion_1.png" alt="Circuit with R3 added" width="500">|
+|<img src="thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
 
-When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. **The resulting impedance will be less than the least resistance in parallel.**
+When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. **The resulting impedance will be less than the least resistance in parallel and greather than **
 
-
+|Assumption helping in estimating impedances values|
+|:-:|
+|<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
 ## Summary
 
@@ -290,8 +292,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzg5MzIwNTAsLTQzNjc1NDYwNSwtMj
-AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
-NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
-19
+eyJoaXN0b3J5IjpbMjEyNTEzODU3MCwtNDM2NzU0NjA1LC0yMD
+M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
+MzgsLTE1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX
+0=
 -->
