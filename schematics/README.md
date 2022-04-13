@@ -139,11 +139,11 @@ When looking at real voltage source with series impedance and several parallel i
 
 Assuming Thevenin's voltage value can be harder because it requires concerning 3 cases:
 
-|Assumption helping in estimating impedances values|
+|Assumptions in estimating impedances values|
 |:-:|
 |<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
-Breaking point of voltage is when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
+Worth highlighting, when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
 
 ## Summary
 
@@ -296,8 +296,8 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMj
-AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
-NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcwNDQxNTU1MF
-19
+eyJoaXN0b3J5IjpbMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
+Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
+NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLT
+E3MDQ0MTU1NTBdfQ==
 -->
