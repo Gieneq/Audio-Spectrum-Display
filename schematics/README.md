@@ -175,16 +175,12 @@ Voltage parameters were gathered and comapred in table:
 
 |Parameter|Microphone MAX9814|Audio Jack|
 |:-|:-:|:-:|
-|DC offset|1.245V|Symetrical 0V|
-|Amplitude|1.22V|1.185V|
+|DC offset|1.22V|Symetrical 0V|
+|Amplitude|1.245V|1.185V|
 |V RMS|0.86V|0.84V|
 |Gain|Constant 40/50/60dB|Dpendant on source|
 
-Because of that, signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to change gain in case of clipping.
-
-
-
-As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not crucial. Both signals will be amplified before passing to ADC.
+Signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to lower gain in case of clipping. RMS voltage value is similar to audio jack input.
 
 ## MAX9814 microphone
 
@@ -198,7 +194,7 @@ Selected parameters:
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
-- Measured DC offset: 1.245V,
+- Measured DC offset: 1.22V,
 - Measured 
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance which will grant:
@@ -316,7 +312,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDE1NDkxMDYsMTE5ODUwNTYwMCwtMT
+eyJoaXN0b3J5IjpbLTE2NjQ2NjM1NDksMTE5ODUwNTYwMCwtMT
 QxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1
 NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3Mz
 QsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1OSwtMTcw
