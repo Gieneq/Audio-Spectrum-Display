@@ -1,10 +1,10 @@
 # Electronics
 
-In this article it will be explained how to choose values of passive components to process signal before being sampled by ADC.
+In this article it will be explained how to choose values of passive components to process signal from audio source before being sampled by ADC.
 
 # Circuit theory basics
 
-Before analysing about real circuit, several words about the circuit theory must be written. When considering resistive load those rules can be applied more generally to impedances.
+Before touching topic of real circuit, several words about the circuit theory must be written. When considering resistive load rules can be applied more generally to impedances.
 
 When designing blocks of analog filters, several parameters must be considered:
 - output impedance of filter,
@@ -277,5 +277,5 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTUzMjgzMCwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbODI5MDQ4NTA0LC0xNzA0NDE1NTUwXX0=
 -->
