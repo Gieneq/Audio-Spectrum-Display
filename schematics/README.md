@@ -220,8 +220,8 @@ High pass RC filter will be used with 3dB angular frequency firstly set to 125ra
 As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
 w0 = 125
-R0 = 4700
-C0 = 1/(R0*w0)
+R1 = 4700
+C1 = 1/(R0*w0)
 print(C0)
 ```
 Thus resulting capacity is 1.7uF:
@@ -229,7 +229,7 @@ Thus resulting capacity is 1.7uF:
 
 Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by formula:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=X_{C1} = \Im(-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}" >
 
 |Capacitance of 2.2uF capacitor|
 |:-:|
@@ -251,7 +251,7 @@ Including output impedance of signal source:
 
 ### Voltage gain
 To find out how voltage varies with frequency finding capacitors impedance is needed:
-
+<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} =-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}" >
 
 
 
@@ -343,11 +343,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA3NTM2MzYsLTM4MzY3MjE2NSwxNz
-Q3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEyMzk0NjYx
-NTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC
-0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1
-MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMT
-Y0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5
-NDYzMjddfQ==
+eyJoaXN0b3J5IjpbMTExMjY5MTU2NiwtMzgzNjcyMTY1LDE3ND
+cwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1
+OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLT
+E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
+LDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
+Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
+NjMyN119
 -->
