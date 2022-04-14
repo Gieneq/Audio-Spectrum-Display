@@ -250,7 +250,8 @@ Including output impedance of signal source:
 |<img src="img/microphone_RC_filter.png" alt="RC Filter schematic" width="500">|
 
 ### Voltage gain
-To find out how voltage varies wit
+To find out how voltage varies with frequency finding capacitors impedance is needed:
+
 
 
 
@@ -342,11 +343,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTI5MTMyOSwtMzgzNjcyMTY1LDE3ND
-cwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1
-OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLT
-E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
-LDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
-Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
-NjMyN119
+eyJoaXN0b3J5IjpbLTE1NjA3NTM2MzYsLTM4MzY3MjE2NSwxNz
+Q3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEyMzk0NjYx
+NTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC
+0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1
+MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMT
+Y0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5
+NDYzMjddfQ==
 -->
