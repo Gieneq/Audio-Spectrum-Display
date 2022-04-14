@@ -215,7 +215,10 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is **96rad/s**:
+Because 2.2uF capacitor is available, it will be choosen. It's reactance:
+
+
+Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is **96rad/s**:
 ```python
 C0 = 2.2e-06
 w0 = 1/(R0*C0)
@@ -318,7 +321,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDAzMDg1NSw5NDk1MzA4ODAsNDk4Mz
+eyJoaXN0b3J5IjpbMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mz
 k1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2Nywt
 MTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMD
 Q5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1
