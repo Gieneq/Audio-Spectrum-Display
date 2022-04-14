@@ -273,7 +273,7 @@ Gain is  complex number, so it can be plotted in complex plane:
 |:-:|
 |<img src="img/system_gain_plot.png" alt="System gain varies with signal angular frequency" width="500">|
 
-At 
+At cutoff frequency real and 
 
 
 
@@ -366,11 +366,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDMzMTc0MzksNjI4MjMyMiwtNTY3OT
-MxOTUsLTM4MzY3MjE2NSwxNzQ3MDE5ODA2LC01MzUyMzIyNDAs
-NDYyMDEwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMz
-Y1MjMyLC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1
-MCw5NDk1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MD
-E2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1
-XX0=
+eyJoaXN0b3J5IjpbMTU2NTc1NTA2MSw2MjgyMzIyLC01Njc5Mz
+E5NSwtMzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0
+NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNj
+UyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUw
+LDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMT
+YzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDVd
+fQ==
 -->
