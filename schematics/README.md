@@ -203,7 +203,7 @@ As indicated earlier the load resistance should be much greater than internal re
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
-High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
+High pass RC filter will be used with cutoff angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
 
 As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
@@ -215,13 +215,14 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is avaiable, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is 96rad/s:
+Because 2.2uF capacitor is available, it will be choosen. Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is **96rad/s**:
 ```python
 C0 = 2.2e-06
 w0 = 1/(R0*C0)
 print(w0)
 ```
 >96.71179883945841
+
 
 
 Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
@@ -317,9 +318,9 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNT
-YwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTks
-LTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OT
-k1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMTc2MDc5NjY1
-OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbMTI0NDAzMDg1NSw5NDk1MzA4ODAsNDk4Mz
+k1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2Nywt
+MTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMD
+Q5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1
+LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
 -->
