@@ -215,8 +215,10 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be choosen. It's reactance:
-
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance:
+|Capacitance of 2.2 uF capacitor|
+|:-:|
+|<img src="capacitance_1u6F.png" alt="" width="500">|
 
 Then new 3dB frequency (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V] is **96rad/s**:
 ```python
@@ -321,9 +323,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mz
-k1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2Nywt
-MTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMD
-Q5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1
-LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OT
+UzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgs
+MjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMz
+Q0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQz
+OCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ
+==
 -->
