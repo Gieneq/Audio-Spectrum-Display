@@ -22,7 +22,7 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 |Simple real voltage source with resistive load|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
 
 When considering resistive load rules can be applied more generally to impedance.
 
@@ -67,7 +67,7 @@ Equivalent circuit is made using:
 
 |Equivalent circuit|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_2.png" alt="" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_2.png" alt="Equivalent Thevenin's circuit" width="500">|
 
 To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source without any loss on resistor, because of no current flow. So output voltage is simply:
 
@@ -325,10 +325,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMj
-A3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAs
-LTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
-Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
-NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLT
-E3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbNDA5MjUyMzAzLC0xNjMyOTE3OTQ3LC0xOD
+cwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwx
+MTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NT
+kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
+MjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNz
+YwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
 -->
