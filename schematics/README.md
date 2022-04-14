@@ -286,6 +286,8 @@ print(f"phase: {np.angle(k_w0)*180/pi:g} deg")
 >magnitude: 0.699664 [V/V] 
 >phase: 45 deg
 
+Phae shift is 45° as expected, but magnitude is not 0.707. That's because of internal resistance, without it result
+
 
 
 
@@ -377,11 +379,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMzU4MDY1OSwxNTY1NzU1MDYxLDYyOD
-IzMjIsLTU2NzkzMTk1LC0zODM2NzIxNjUsMTc0NzAxOTgwNiwt
-NTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5LC0xMzk4Mz
-I2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMTg3MDc1OTkx
-LDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNT
-YwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTld
-fQ==
+eyJoaXN0b3J5IjpbMTU1NjIzNTIzOCwxNzIzNTgwNjU5LDE1Nj
+U3NTUwNjEsNjI4MjMyMiwtNTY3OTMxOTUsLTM4MzY3MjE2NSwx
+NzQ3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEyMzk0Nj
+YxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3
+LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mz
+k1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2N119
+
 -->
