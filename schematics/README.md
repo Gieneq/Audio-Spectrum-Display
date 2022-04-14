@@ -213,7 +213,6 @@ High pass filter is needed to remove DC component of the signal. It is indicated
 |:-:|
 |<img src="img/max9814_dc_removal_datasheet.PNG" alt="DC removal from MAX's datasheet" width="500">|
 
-
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
 High pass RC filter will be used with cutoff angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
@@ -336,7 +335,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDc1MTkzLDEyMzk0NjYxNTksLTEzOT
+eyJoaXN0b3J5IjpbNDYyMDEwMDA5LDEyMzk0NjYxNTksLTEzOT
 gzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC0xODcwNzU5
 OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwxMTk4NT
 A1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjEx
