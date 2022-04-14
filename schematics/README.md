@@ -203,7 +203,7 @@ As indicated earlier the load resistance should be much greater than internal re
 |:-:|
 |<img src="img/MAX9814_datasheet_schematic.PNG" alt="Typical application of MAX9814" width="500">|
 
-At the output of 
+As depicted on the diagram, at he output there is amplifier. It coresponds to 
 So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
 
 ## Filter design
@@ -337,10 +337,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0ODA5NTExOCwtMTYzMjkxNzk0NywtMT
-g3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEs
-MTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2ND
-U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
-MzI3LDE0OTk1MDY3MzQsOTg0ODQ2NDM4LC0xNTYwODEwNSwtMT
-c2MDc5NjY1OSwtMTcwNDQxNTU1MF19
+eyJoaXN0b3J5IjpbLTEzNDE3MjM0NDUsLTE2MzI5MTc5NDcsLT
+E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
+LDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
+Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
+NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLT
+E3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
