@@ -229,9 +229,9 @@ Thus resulting capacity is 1.7uF:
 
 Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is:
 
-|Capacitance of 2.2 uF capacitor|
+|Capacitance of 2.2uF capacitor|
 |:-:|
-|<img src="img/capacitance_1u6F.png" alt="" width="500">|
+|<img src="img/capacitance_1u6F.png" alt="Capacitance of 2.2uF capacitor" width="500">|
 
 Then new cutoff frequency is **96rad/s**:
 ```python
@@ -338,11 +338,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwNjk4NDYwLC01MzUyMzIyNDAsNDYyMD
-EwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMy
-LC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5ND
-k1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4
-LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMD
-M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
-MzhdfQ==
+eyJoaXN0b3J5IjpbMTc0NzAxOTgwNiwtNTM1MjMyMjQwLDQ2Mj
+AxMDAwOSwxMjM5NDY2MTU5LC0xMzk4MzI2NzQ5LDY4MTM2NTIz
+MiwtMTYzMjkxNzk0NywtMTg3MDc1OTkxLDEyMDc3MDk0NTAsOT
+Q5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNTYwMCwtMTQxNTAxNjM5
+OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMj
+AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
+NDM4XX0=
 -->
