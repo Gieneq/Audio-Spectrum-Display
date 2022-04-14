@@ -199,9 +199,11 @@ Selected parameters:
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. 
 
-|Knocking near microphone - maximal amplitude achieved|
+|DC removal from MA|
 |:-:|
-|<img src="micro_knock_high.BMP" alt="" width="500">|
+|<img src="img/max9814_dc_removal_datasheet.PNG" alt="" width="500">|
+
+
 
 |Knocking near microphone - maximal amplitude achieved|
 |:-:|
@@ -333,10 +335,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxMTYyNTg3LC0xNjMyOTE3OTQ3LC0xOD
-cwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwx
-MTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NT
-kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
-MjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNz
-YwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbLTEzMDc0NDQ4OTMsLTE2MzI5MTc5NDcsLT
+E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
+LDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
+Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
+NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLT
+E3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
