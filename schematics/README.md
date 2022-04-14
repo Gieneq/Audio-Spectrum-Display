@@ -65,7 +65,7 @@ Equivalent circuit is made using:
 - new voltage source with Thevenin's voltage value,
 - resistor with Thevenin's resistance value.
 
-|Equivalent circuit|
+|Equivalent Thevenin's circuit|
 |:-:|
 |<img src="img/basic_circuit_thevenins_theorem_2.png" alt="Equivalent Thevenin's circuit" width="500">|
 
@@ -96,7 +96,7 @@ Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R
 
 |Circuit with R3 added|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
 
 The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit) and thus not influencing parallel connection of R1 and R3. 
 
@@ -133,7 +133,7 @@ As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher
 ---
 |Real voltage source with 2 parallel loads|
 |:-:|
-|<img src="thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
+|<img src="img/thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
 
 When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. The resulting impedance will be **less than the least resistance in parallel** and **greater than least resistance in parallel divided by number of resistors in total**.
 
@@ -141,7 +141,7 @@ Assuming Thevenin's voltage value can be harder because it requires concerning 3
 
 |Assumptions in estimating impedances values|
 |:-:|
-|<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
+|<img src="img/thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
 Worth highlighting, when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
 
@@ -155,9 +155,9 @@ When chaining filter blocks the following tips should be considered:
 
 Audio signal can be delivered from both **microphone** or **audio jack**:
 
-|Block schematic of Audio Spectrum Display V1.0 |
+|Block schematic of Audio Spectrum Display V1.0|
 |:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="" width="500">|
+|<img src="img/spectrum_display_HSVFFT_V1_vis.png" alt="Block schematic of Audio Spectrum Display V1.0" width="500">|
 
 Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket (having mechanical switch). So both signals from microphone and audio jack should be similar. Only way to make those signals look similar is to add filter between microphone output and switching socket.
 
@@ -197,9 +197,17 @@ Selected parameters:
 - Measured DC offset: 1.22V,
 - Measured AC RMS voltage: 0.88V.
 
-As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
+As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. 
 
+|Knocking near microphone - maximal amplitude achieved|
+|:-:|
+|<img src="micro_knock_high.BMP" alt="" width="500">|
 
+|Knocking near microphone - maximal amplitude achieved|
+|:-:|
+|<img src="micro_knock_high.BMP" alt="" width="500">|
+
+So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
 
 ## Filter design
 
@@ -325,7 +333,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA5MjUyMzAzLC0xNjMyOTE3OTQ3LC0xOD
+eyJoaXN0b3J5IjpbNTkxMTYyNTg3LC0xNjMyOTE3OTQ3LC0xOD
 cwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwx
 MTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NT
 kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
