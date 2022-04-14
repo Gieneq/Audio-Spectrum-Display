@@ -199,16 +199,22 @@ Selected parameters:
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. 
 
-
-|Knocking near microphone - maximal amplitude achieved|
+|Typical application of MAX9814|
 |:-:|
-|<img src="micro_knock_high.BMP" alt="" width="500">|
+|<img src="img/MAX9814_datasheet_schematic.PNG" alt="Typical application of MAX9814" width="500">|
 
+At the output of 
 So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
 
 ## Filter design
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
+
+
+|DC removal from MAX's datasheet|
+|:-:|
+|<img src="img/max9814_dc_removal_datasheet.PNG" alt="DC removal from MAX's datasheet" width="500">|
+
 
 
 High pass RC filter will be used with cutoff angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
@@ -331,7 +337,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODk4OTI2NywtMTYzMjkxNzk0NywtMT
+eyJoaXN0b3J5IjpbLTk0ODA5NTExOCwtMTYzMjkxNzk0NywtMT
 g3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEs
 MTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2ND
 U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
