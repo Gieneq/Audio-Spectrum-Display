@@ -233,7 +233,7 @@ Because 2.2uF capacitor is available, it will be chosen. It's reactance called c
 
 |Capacitance of 2.2uF capacitor|
 |:-:|
-|<img src="img/capacitance_1u6F.png" alt="Capacitance of 2.2uF capacitor" width="500">|
+|<img src="img/capacitance.png" alt="Capacitance of 2.2uF capacitor" width="500">|
 
 Then new cutoff frequency is **96rad/s**:
 ```python
@@ -264,6 +264,9 @@ Which can be simply converted to gain:
 
 Gain is  complex number, so it can be plotted in complex plane:
 
+|System gain varies with signal angular frequency|
+|:-:|
+|<img src="img/system_gain_plot.png" alt="System gain varies with signal angular frequency" width="500">|
 
 
 
@@ -357,11 +360,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4MjMyMiwtNTY3OTMxOTUsLTM4MzY3Mj
-E2NSwxNzQ3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEy
-Mzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOT
-E3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAs
-NDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OT
-c2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0
-XX0=
+eyJoaXN0b3J5IjpbLTEzMDMwMjExMCw2MjgyMzIyLC01Njc5Mz
+E5NSwtMzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0
+NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNj
+UyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUw
+LDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMT
+YzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDVd
+fQ==
 -->
