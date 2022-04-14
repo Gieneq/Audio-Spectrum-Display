@@ -251,8 +251,9 @@ Including output impedance of signal source:
 
 ### Voltage gain
 To find out how voltage varies with frequency finding capacitors impedance is needed:
-<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} =-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}" >
-
+<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}" >
+Hence voltage divider gives:
+<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}" >
 
 
 
@@ -343,7 +344,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjY5MTU2NiwtMzgzNjcyMTY1LDE3ND
+eyJoaXN0b3J5IjpbMTk3NTk4OTQzOSwtMzgzNjcyMTY1LDE3ND
 cwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1
 OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLT
 E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
