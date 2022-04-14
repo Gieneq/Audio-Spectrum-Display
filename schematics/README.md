@@ -299,7 +299,9 @@ More informations can be obtained by splitting complex plot into two separate pa
 - magnitude plot,
 - phase plot.
 
-
+|System gain: phase and magnitude|
+|:-:|
+|<img src="img/system_gain_plot_phase_magnitude.png" alt="System gain: phase and magnitude" width="500">|
 
 
 
@@ -390,11 +392,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDExMzk4MiwxNzIzNTgwNjU5LDE1Nj
-U3NTUwNjEsNjI4MjMyMiwtNTY3OTMxOTUsLTM4MzY3MjE2NSwx
-NzQ3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEyMzk0Nj
-YxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3
-LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mz
-k1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2N119
-
+eyJoaXN0b3J5IjpbMjAwNDQ1NzYzNCwxMDMwMTEzOTgyLDE3Mj
+M1ODA2NTksMTU2NTc1NTA2MSw2MjgyMzIyLC01Njc5MzE5NSwt
+MzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMT
+AwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIs
+LTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OT
+UzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOThd
+fQ==
 -->
