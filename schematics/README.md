@@ -260,7 +260,12 @@ Hence voltage divider gives:
 
 Which can be simply converted to gain:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R{in}-j(wC)^{-1}} = \frac{R_1(R_1 \!%2B\! R{in}) \!%2B\! jR_1(wC)^{-1} }{(R_1 \!%2B\! R{in})^2+(wC)^{-2}}[V/V]" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R{in}-j(wC)^{-1}} = \frac{R_1(R_1 \!%2B\! R{in}) \!%2B\! jR_1(wC)^{-1} }{(R_1 \!%2B\! R{in})^2 \!%2B\! (wC)^{-2}}[V/V]" >
+
+```python
+ZC1 = -1j/(w_draw*C1)
+k = R1/ (R1 + Rin + ZC1)
+```
 
 Gain is  complex number, so it can be plotted in complex plane:
 
@@ -268,6 +273,7 @@ Gain is  complex number, so it can be plotted in complex plane:
 |:-:|
 |<img src="img/system_gain_plot.png" alt="System gain varies with signal angular frequency" width="500">|
 
+At 
 
 
 
@@ -360,11 +366,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDMwMjExMCw2MjgyMzIyLC01Njc5Mz
-E5NSwtMzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0
-NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNj
-UyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUw
-LDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMT
-YzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDVd
-fQ==
+eyJoaXN0b3J5IjpbLTE0MDMzMTc0MzksNjI4MjMyMiwtNTY3OT
+MxOTUsLTM4MzY3MjE2NSwxNzQ3MDE5ODA2LC01MzUyMzIyNDAs
+NDYyMDEwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMz
+Y1MjMyLC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1
+MCw5NDk1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MD
+E2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1
+XX0=
 -->
