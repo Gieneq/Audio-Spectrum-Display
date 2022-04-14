@@ -253,7 +253,7 @@ Including output impedance of signal source:
 To find out how voltage varies with frequency finding capacitors impedance is needed:
 <img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}" >
 Hence voltage divider gives:
-<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{in}\frac{R_1}{R_{in} \!%2B\! R_1 \!%2B\! Z_{C1}}" >
 
 
 
@@ -344,11 +344,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NTk4OTQzOSwtMzgzNjcyMTY1LDE3ND
-cwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1
-OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLT
-E4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUx
-LDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNj
-Q1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0
-NjMyN119
+eyJoaXN0b3J5IjpbNDkxNjYxOTQ2LC0zODM2NzIxNjUsMTc0Nz
+AxOTgwNiwtNTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5
+LC0xMzk4MzI2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMT
+g3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEs
+MTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2ND
+U5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQxNjA1NCwtMjA0OTQ2
+MzI3XX0=
 -->
