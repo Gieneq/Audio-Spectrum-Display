@@ -229,7 +229,7 @@ Thus resulting capacity is 1.7uF:
 
 Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by formula:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=X_{C1} = \Im(-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=X_{C1} = \Im(-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}[\Omega]" >
 
 |Capacitance of 2.2uF capacitor|
 |:-:|
@@ -251,9 +251,9 @@ Including output impedance of signal source:
 
 ### Voltage gain
 To find out how voltage varies with frequency finding capacitors impedance is needed:
-<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}[\Omega]" >
 Hence voltage divider gives:
-<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{in}\frac{R_1}{R_{in} \!%2B\! R_1 \!%2B\! Z_{C1}}" >
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{in}\frac{R_1}{R_{in} \!%2B\! R_1 \!%2B\! Z_{C1}}[V] = " >
 
 
 
@@ -344,7 +344,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkxNjYxOTQ2LC0zODM2NzIxNjUsMTc0Nz
+eyJoaXN0b3J5IjpbLTU2NzkzMTk1LC0zODM2NzIxNjUsMTc0Nz
 AxOTgwNiwtNTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5
 LC0xMzk4MzI2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMT
 g3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEs
