@@ -290,7 +290,10 @@ Phase shift is 45° as expected, but magnitude is not 0.707. That's because 3dB 
 >k at cutoff frequency: 0.5+0.5j [V/V] 
 >magnitude: 0.707107 [V/V] 
 >phase: 45 deg
->
+
+|System gain with internal resistance (red) and without (blue)|
+|:-:|
+|<img src="img/system_gain_plot_no_rin.png" alt="System gain with internal resistance (red) and without (blue)" width="500">|
 
 
 
@@ -383,11 +386,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDY5NjI3MDYsMTcyMzU4MDY1OSwxNT
-Y1NzU1MDYxLDYyODIzMjIsLTU2NzkzMTk1LC0zODM2NzIxNjUs
-MTc0NzAxOTgwNiwtNTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5ND
-Y2MTU5LC0xMzk4MzI2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0
-NywtMTg3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5OD
-M5NTEsMTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3Njdd
-fQ==
+eyJoaXN0b3J5IjpbMzk0MTA5Mzg5LDE3MjM1ODA2NTksMTU2NT
+c1NTA2MSw2MjgyMzIyLC01Njc5MzE5NSwtMzgzNjcyMTY1LDE3
+NDcwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOTQ2Nj
+E1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcs
+LTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOT
+UxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3XX0=
+
 -->
