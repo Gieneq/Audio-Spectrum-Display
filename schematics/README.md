@@ -22,7 +22,7 @@ Let's consider basic circuit made out of ideal voltage source 1V DC with series 
 
 |Simple real voltage source with resistive load|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_1.png" alt="Simple real voltage source with resistive load" width="500">|
 
 When considering resistive load rules can be applied more generally to impedance.
 
@@ -65,9 +65,9 @@ Equivalent circuit is made using:
 - new voltage source with Thevenin's voltage value,
 - resistor with Thevenin's resistance value.
 
-|Equivalent circuit|
+|Equivalent Thevenin's circuit|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_2.png" alt="" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_2.png" alt="Equivalent Thevenin's circuit" width="500">|
 
 To ensure if both circuits are behaving the same way, let's look at output voltage. Thevenin's circuit's output voltage is passed from voltage source without any loss on resistor, because of no current flow. So output voltage is simply:
 
@@ -96,7 +96,7 @@ Now let's consider equivalent Thevenin's circuit with another resistor R3 = 100R
 
 |Circuit with R3 added|
 |:-:|
-|<img src="basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
+|<img src="img/basic_circuit_thevenins_theorem_3.png" alt="Circuit with R3 added" width="500">|
 
 The goal is to find R1 that maximize power transfer to R3=100R. Because Thevenin's resistance of R1 and R2=100R connection cannot exceed 100R (R2), the most power will be transferred when R1 is close to infinity (open circuit) and thus not influencing parallel connection of R1 and R3. 
 
@@ -133,7 +133,7 @@ As pointed before when R3 = Rth power reaches maximum. When R3 rises much higher
 ---
 |Real voltage source with 2 parallel loads|
 |:-:|
-|<img src="thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
+|<img src="img/thevenin_conversion_1.png" alt="Real voltage source with 2 parallel loads" width="500">|
 
 When looking at real voltage source with series impedance and several parallel impedances, the output impedance (or equivalent Thevenin's resistance) can be find out using **parallel connection of all impedances**. The resulting impedance will be **less than the least resistance in parallel** and **greater than least resistance in parallel divided by number of resistors in total**.
 
@@ -141,7 +141,7 @@ Assuming Thevenin's voltage value can be harder because it requires concerning 3
 
 |Assumptions in estimating impedances values|
 |:-:|
-|<img src="thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
+|<img src="img/thevenin_conversion_2.png" alt="Assumption helping in estimating impedances values" width="500">|
 
 Worth highlighting, when resistance replacing parallel connection is equal internal resistance of source, then voltage is halved. 
 
@@ -151,30 +151,36 @@ When chaining filter blocks the following tips should be considered:
 - Impedance of blocks should be higher than output impedance of source and lower than input impednce of receiver.
 - Chained blocks should have increasing impedance - factor of 10x should be enough. It grants high output voltage of each block, and lowers overall current draw to be close to current draw caused by the lowest of all impedance.
 
-|BLock schematic of Audio Spectrum Display V1.0 |
-|:-:|
-|<img src="spectrum_display_HSVFFT_V1_vis.png" alt="immm" width="500">|
-
 # Signal preparation
 
-Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket with mechanical switch. So both signals from microphone and audio jack should be similiar, but only microphone signal can be modified due to plug switching.
+Audio signal can be delivered from both **microphone** or **audio jack**:
 
-|Parameter|Microphone MAX9814|Audio Jack|
-|:-|:-:|:-:|
-|DC offset|1.245V|Symetrical 0V|
-|Amplitude|0.765V|1.185V|
-|V RMS|0.54|0.84|
-|Gain|Constant 40/50/60dB|Dpendant on source|
+|Block schematic of Audio Spectrum Display V1.0|
+|:-:|
+|<img src="img/spectrum_display_HSVFFT_V1_vis.png" alt="Block schematic of Audio Spectrum Display V1.0" width="500">|
 
-Because of that, signal from microphone should be high pass filtered to remove DC component. At this stage builtin amplifier is set to maximum 60dB with option to change gain in case of clipping.
+Output signal from microphone can by switched by plugging 3.5mm audio jack to 5 pin socket (having mechanical switch). So both signals from microphone and audio jack should be similar. Only way to make those signals look similar is to add filter between microphone output and switching socket.
 
 |Audio Jack max volume 1kHz | Microphone the same audio source, headphones 1cm from device|
 |:-------------------------:|:-------------------------:|
 |![](jack_1khz.BMP)  |  ![](micro_1khz.BMP)|
 
-As depicted signal from microphone has lower maximal amplitude, but amplifying before being passed to switch socket is not vital. Both signals will be amplified before passing to ADC.
+In practice signal from microphone (as stated in datasheet) can be much higher:
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+|Knocking near microphone - maximal amplitude achieved|
+|:-:|
+|<img src="micro_knock_high.BMP" alt="" width="500">|
+
+Voltage parameters were gathered and comapred in table:
+
+|Parameter|Microphone MAX9814|Audio Jack|
+|:-|:-:|:-:|
+|DC offset|1.22V|Symetrical 0V|
+|Amplitude|1.245V|1.185V|
+|V RMS|0.88V|0.84V|
+|Gain|Constant 40/50/60dB|Dpendant on source|
+
+Signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to lower gain in case of clipping. RMS voltage value is similar to audio jack input, a bit higher which combines well with damping of passive filter.
 
 ## MAX9814 microphone
 
@@ -182,26 +188,62 @@ Links:
 - [Analog Devices IC - MAX9814 datasheet](https://datasheets.maximintegrated.com/en/ds/MAX9814.pdf)
 - [Adafruit Module: schematic, EAGLE files](https://github.com/adafruit/Adafruit-MAX9814-AGC-Microphone-PCB)
 
-Crucial parameters:
+Selected parameters:
 - Supply Voltage: 2.7V to 5.5V 
 - Zout: 50R
 - Min resistive load: 5k
 - Max capacitive load: 200pF
 - Max output current 2mA
+- Measured DC offset: 1.22V,
+- Measured AC RMS voltage: 0.88V.
 
-## High pass microphone signal
+As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. Module of output filter impedance cannot drop below 5k.
 
-High pass RC filter will be used with cutoff frequency (maximal damped frequency) od 20Hz which is angular frequency of 125 rad/s. 20kHz max frequency is considered which coresponds to 125664 rad/s.
+|Typical application of MAX9814|
+|:-:|
+|<img src="img/MAX9814_datasheet_schematic.PNG" alt="Typical application of MAX9814" width="500">|
 
-Resistance should be minimum 10x grather than outputimpedance of signal source to not overload source and lower voltage. Recomended resistance is 5k.
+As depicted on the diagram, at he output there is amplifier. In datasheet it is noted, that output cannot be loaded with capacitor greater than 200pF. It refers to stability – additional capacitor is series with internal amplifier resistance brings pole in transfer function, which lowers phase margin of the system. As a result there can occur "ringing" in output signal.  In this system it can be neglected. For more details see [Op Amps Driving Capacitive Loads](https://www.analog.com/en/analog-dialogue/articles/ask-the-applications-engineer-25.html)
+
+## Filter design
+
+High pass filter is needed to remove DC component of the signal. It is indicated in the datasheet:
+
+|DC removal filter from MAX's datasheet|
+|:-:|
+|<img src="img/max9814_dc_removal_datasheet.PNG" alt="DC removal from MAX's datasheet" width="500">|
+
+Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
+
+High pass RC filter will be used with 3dB angular frequency firstly set to 125rad/s. 3dB frequency called cutoff frequency refers to frequency at which RMS value drops by 3dB which is 1/sqrt(2) = 0.707 [V/V]. 
+
+As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
 w0 = 125
-R0 = 5000
+R0 = 4700
 C0 = 1/(R0*w0)
 print(C0)
 ```
-Resulting capacity is 1.6uF:
->1.6e-06
+Thus resulting capacity is 1.7uF:
+>1.7021276595744682e-06
+
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is:
+
+|Capacitance of 2.2 uF capacitor|
+|:-:|
+|<img src="capacitance_1u6F.png" alt="" width="500">|
+
+Then new cutoff frequency is **96rad/s**:
+```python
+C0 = 2.2e-06
+w0 = 1/(R0*C0)
+print(w0)
+```
+>96.71179883945841
+
+
+
+
 
 Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
 
@@ -296,8 +338,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
-Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
-NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLT
-E3MDQ0MTU1NTBdfQ==
+eyJoaXN0b3J5IjpbLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOT
+Q2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5
+NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OT
+gzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3
+LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLT
+IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
+MDVdfQ==
 -->
