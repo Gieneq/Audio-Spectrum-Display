@@ -215,7 +215,7 @@ High pass filter is needed to remove DC component of the signal. It is indicated
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
-High pass RC filter will be used with 3dB angular frequency firstly set to 125rad/s. 3dB frequency called cutoff frequency refers to frequency at which RMS value drops by 1/sqrt(2) = 0.707 [V/V]. 
+High pass RC filter will be used with 3dB angular frequency firstly set to 125rad/s. 3dB frequency called cutoff frequency refers to frequency at which RMS value drops by 3dB which is 1/sqrt(2) = 0.707 [V/V]. 
 
 As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
@@ -227,18 +227,21 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance:
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is:
+
 |Capacitance of 2.2 uF capacitor|
 |:-:|
 |<img src="capacitance_1u6F.png" alt="" width="500">|
 
-Then new is **96rad/s**:
+Then new cutoff frequency is **96rad/s**:
 ```python
 C0 = 2.2e-06
 w0 = 1/(R0*C0)
 print(w0)
 ```
 >96.71179883945841
+
+
 
 
 
@@ -335,7 +338,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNzgwNzAzOSw0NjIwMTAwMDksMTIzOT
+eyJoaXN0b3J5IjpbLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOT
 Q2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5
 NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OT
 gzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3
