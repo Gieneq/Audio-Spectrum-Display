@@ -215,10 +215,7 @@ High pass filter is needed to remove DC component of the signal. It is indicated
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
-High pass RC filter will be used with 3dB frequency set to 125ra (called cutoff frequency) in which RMS  value drops by 1/sqrt(2) = 0.707 [V/V]
-
-
-cutoff angular frequency of 125 rad/s. 20kHz max frequency is considered which corresponds to 125664 rad/s.
+High pass RC filter will be used with 3dB angular frequency firstly set to 125rad/s. 3dB frequency called cutoff frequency refers to frequency at which RMS value drops by 1/sqrt(2) = 0.707 [V/V]. 
 
 As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
@@ -338,11 +335,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTIwMTMxODUsNDYyMDEwMDA5LDEyMz
-k0NjYxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOTE3
-OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsND
-k4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2
-NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC
-0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4
-MTA1XX0=
+eyJoaXN0b3J5IjpbLTkxNzgwNzAzOSw0NjIwMTAwMDksMTIzOT
+Q2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5
+NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OT
+gzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3
+LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLT
+IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
+MDVdfQ==
 -->
