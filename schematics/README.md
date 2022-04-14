@@ -282,7 +282,9 @@ print(f"k at cutoff frequency: {k_w0:g}")
 print(f"magnitude: {np.absolute(k_w0):g}")
 print(f"gain: {np.angle(k_w0):g}")
 ```
-
+>k at cutoff frequency: 0.494737+0.494737j [V/V] 
+>magnitude: 0.699664 [V/V] 
+>phase: 45 deg
 
 
 
@@ -375,7 +377,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MjMwNzU0OCwxNTY1NzU1MDYxLDYyOD
+eyJoaXN0b3J5IjpbMTk4NzA5MzI0MiwxNTY1NzU1MDYxLDYyOD
 IzMjIsLTU2NzkzMTk1LC0zODM2NzIxNjUsMTc0NzAxOTgwNiwt
 NTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5LC0xMzk4Mz
 I2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMTg3MDc1OTkx
