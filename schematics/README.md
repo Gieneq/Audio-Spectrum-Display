@@ -273,7 +273,16 @@ Gain is  complex number, so it can be plotted in complex plane:
 |:-:|
 |<img src="img/system_gain_plot.png" alt="System gain varies with signal angular frequency" width="500">|
 
-At cutoff frequency real and 
+At cutoff frequency real and imaginary part are equal:
+```python
+ZC1_w0 = -1j/(w0*C1)
+k_w0 = R1/ (R1 + Rin + ZC1_w0)
+
+print(f"k at cutoff frequency: {k_w0:g}")
+print(f"magnitude: {np.absolute(k_w0):g}")
+print(f"gain: {np.angle(k_w0):g}")
+```
+
 
 
 
@@ -366,11 +375,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTc1NTA2MSw2MjgyMzIyLC01Njc5Mz
-E5NSwtMzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0
-NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNj
-UyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUw
-LDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMT
-YzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDVd
+eyJoaXN0b3J5IjpbMTE2MjMwNzU0OCwxNTY1NzU1MDYxLDYyOD
+IzMjIsLTU2NzkzMTk1LC0zODM2NzIxNjUsMTc0NzAxOTgwNiwt
+NTM1MjMyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5LC0xMzk4Mz
+I2NzQ5LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMTg3MDc1OTkx
+LDEyMDc3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNT
+YwMCwtMTQxNTAxNjM5OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTld
 fQ==
 -->
