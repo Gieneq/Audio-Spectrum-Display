@@ -227,8 +227,9 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by forula:
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by formula:
 
+<img height="50" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
 
 |Capacitance of 2.2uF capacitor|
 |:-:|
@@ -242,23 +243,21 @@ print(w0)
 ```
 >96.71179883945841
 
+Including output impedance of signal source:
+
 |RC Filter schematic|
 |:-:|
 |<img src="img/microphone_RC_filter.png" alt="RC Filter schematic" width="500">|
 
 
 
-Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
 
-|Schematic of audio source with RC high pass filter|
-|:-:|
-|<img src="schematic_microphone_high_pass.png" alt="" width="500">|
 
 ## Capacitor reactance
 
 Capacitor reactance which is imaginary part of complex capacitor's impedance is given by formula:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
+
 
 Generate angular frequency Numpy array:
 
@@ -341,11 +340,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkwNzUzMDcyLDE3NDcwMTk4MDYsLTUzNT
-IzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0
-OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMj
-A3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAs
-LTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
-Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
-NzM0XX0=
+eyJoaXN0b3J5IjpbMjAxNjgxMDExOSwxNzQ3MDE5ODA2LC01Mz
+UyMzIyNDAsNDYyMDEwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3
+NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMT
+IwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAw
+LC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtND
+M2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUw
+NjczNF19
 -->
