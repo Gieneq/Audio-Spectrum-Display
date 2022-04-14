@@ -251,11 +251,23 @@ Including output impedance of signal source:
 
 ### Voltage gain
 To find out how voltage varies with frequency finding capacitors impedance is needed:
+
 <img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}[\Omega]" >
+
 Hence voltage divider gives:
+
 <img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{in}\frac{R_1}{R_{in} \!%2B\! R_1 \!%2B\! Z_{C1}}[V]" >
+
 Which can be simply converted to gain:
+
 <img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R{in}-j(wC)^{-1}} = \frac{R_1(R_1 \!%2B\! R{in}) \!%2B\! jR_1(wC)^{-1} }{(R_1 \!%2B\! R{in})^2+(wC)^{-2}}[V/V]" >
+
+Gain is  complex number, so it can be plotted in complex plane:
+
+
+
+
+
 
 
 ## Capacitor reactance
@@ -345,11 +357,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDkzMzM3NjksLTU2NzkzMTk1LC0zOD
-M2NzIxNjUsMTc0NzAxOTgwNiwtNTM1MjMyMjQwLDQ2MjAxMDAw
-OSwxMjM5NDY2MTU5LC0xMzk4MzI2NzQ5LDY4MTM2NTIzMiwtMT
-YzMjkxNzk0NywtMTg3MDc1OTkxLDEyMDc3MDk0NTAsOTQ5NTMw
-ODgwLDQ5ODM5NTEsMTE5ODUwNTYwMCwtMTQxNTAxNjM5OCwyNj
-k3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMjAzNDQx
-NjA1NF19
+eyJoaXN0b3J5IjpbNjI4MjMyMiwtNTY3OTMxOTUsLTM4MzY3Mj
+E2NSwxNzQ3MDE5ODA2LC01MzUyMzIyNDAsNDYyMDEwMDA5LDEy
+Mzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNjMyOT
+E3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAs
+NDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OT
+c2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0
+XX0=
 -->
