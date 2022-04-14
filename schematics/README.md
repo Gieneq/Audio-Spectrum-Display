@@ -231,7 +231,7 @@ Because 2.2uF capacitor is available, it will be chosen. It's reactance called c
 
 |Capacitance of 2.2 uF capacitor|
 |:-:|
-|<img src="capacitance_1u6F.png" alt="" width="500">|
+|<img src="img/capacitance_1u6F.png" alt="" width="500">|
 
 Then new cutoff frequency is **96rad/s**:
 ```python
@@ -338,11 +338,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOT
-Q2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5
-NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OT
-gzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3
-LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLT
-IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
-MDVdfQ==
+eyJoaXN0b3J5IjpbOTcwNjk4NDYwLC01MzUyMzIyNDAsNDYyMD
+EwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3NDksNjgxMzY1MjMy
+LC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5ND
+k1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4
+LDI2OTc3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMD
+M0NDE2MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0
+MzhdfQ==
 -->
