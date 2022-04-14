@@ -227,7 +227,8 @@ print(C0)
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is:
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by forula:
+
 
 |Capacitance of 2.2uF capacitor|
 |:-:|
@@ -241,7 +242,9 @@ print(w0)
 ```
 >96.71179883945841
 
-
+|RC Filter schematic|
+|:-:|
+|<img src="img/microphone_RC_filter.png" alt="RC Filter schematic" width="500">|
 
 
 
@@ -338,11 +341,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NzAxOTgwNiwtNTM1MjMyMjQwLDQ2Mj
-AxMDAwOSwxMjM5NDY2MTU5LC0xMzk4MzI2NzQ5LDY4MTM2NTIz
-MiwtMTYzMjkxNzk0NywtMTg3MDc1OTkxLDEyMDc3MDk0NTAsOT
-Q5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNTYwMCwtMTQxNTAxNjM5
-OCwyNjk3Nzk3NjcsLTE2NDU5MjIxMTksLTQzNjc1NDYwNSwtMj
-AzNDQxNjA1NCwtMjA0OTQ2MzI3LDE0OTk1MDY3MzQsOTg0ODQ2
-NDM4XX0=
+eyJoaXN0b3J5IjpbODkwNzUzMDcyLDE3NDcwMTk4MDYsLTUzNT
+IzMjI0MCw0NjIwMTAwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0
+OSw2ODEzNjUyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMj
+A3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAs
+LTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
+Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
+NzM0XX0=
 -->
