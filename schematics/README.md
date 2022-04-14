@@ -203,7 +203,9 @@ As indicated earlier the load resistance should be much greater than internal re
 |:-:|
 |<img src="img/MAX9814_datasheet_schematic.PNG" alt="Typical application of MAX9814" width="500">|
 
-As depicted on the diagram, at he output there is amplifier. In datasheet it is noted, that output cannot be loaded with capacitor greather than 200pF. It refers to stability – additional capacitor  and can be neglected in this system.
+As depicted on the diagram, at he output there is amplifier. In datasheet it is noted, that output cannot be loaded with capacitor greather than 200pF. It refers to stability – additional capacitor is series with internal amplifier resistance brings pole in transfer function. For more detalis see 
+
+ and can be neglected in this system.
 
 ## Filter design
 
@@ -336,10 +338,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC0xOD
-cwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwx
-MTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OTc3OTc2NywtMTY0NT
-kyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2MDU0LC0yMDQ5NDYz
-MjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLTE1NjA4MTA1LC0xNz
-YwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbMTI1NTg3NTk0MCw2ODEzNjUyMzIsLTE2Mz
+I5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4
+MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nz
+c5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYw
+NTQsLTIwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMT
+U2MDgxMDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ==
 -->
