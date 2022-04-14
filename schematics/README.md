@@ -295,7 +295,7 @@ Phase shift is 45° as expected, but magnitude is not 0.707. That's because 3dB 
 |:-:|
 |<img src="img/system_gain_plot_no_rin.png" alt="System gain with internal resistance (red) and without (blue)" width="500">|
 
-More informations can be obtained by splitting complex plot into two separate parts in function of angular frequency:
+More information can be obtained by splitting complex plot into two separate parts in function of angular frequency:
 - magnitude plot,
 - phase plot.
 
@@ -392,11 +392,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDQ1NzYzNCwxMDMwMTEzOTgyLDE3Mj
-M1ODA2NTksMTU2NTc1NTA2MSw2MjgyMzIyLC01Njc5MzE5NSwt
-MzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMT
-AwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIs
-LTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OT
-UzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOThd
-fQ==
+eyJoaXN0b3J5IjpbLTk5MjYxNzAwMywyMDA0NDU3NjM0LDEwMz
+AxMTM5ODIsMTcyMzU4MDY1OSwxNTY1NzU1MDYxLDYyODIzMjIs
+LTU2NzkzMTk1LC0zODM2NzIxNjUsMTc0NzAxOTgwNiwtNTM1Mj
+MyMjQwLDQ2MjAxMDAwOSwxMjM5NDY2MTU5LC0xMzk4MzI2NzQ5
+LDY4MTM2NTIzMiwtMTYzMjkxNzk0NywtMTg3MDc1OTkxLDEyMD
+c3MDk0NTAsOTQ5NTMwODgwLDQ5ODM5NTEsMTE5ODUwNTYwMF19
+
 -->
