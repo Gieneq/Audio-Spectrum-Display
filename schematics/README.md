@@ -203,11 +203,10 @@ As indicated earlier the load resistance should be much greater than internal re
 |:-:|
 |<img src="img/MAX9814_datasheet_schematic.PNG" alt="Typical application of MAX9814" width="500">|
 
-As depicted on the diagram, at he output there is amplifier. In datasheet it is noted, that output cannot be loaded with capacitor greather than 200pF. It refers to stability – additional capacitor is series with internal amplifier resistance brings pole in transfer function, which lowers phase margin of the system. As a result there can occur "ringing" in output signal. For more details see [Op Amps Driving Capacitive Loads](https://www.analog.com/en/analog-dialogue/articles/ask-the-applications-engineer-25.html)
-
- and can be neglected in this system.
+As depicted on the diagram, at he output there is amplifier. In datasheet it is noted, that output cannot be loaded with capacitor greater than 200pF. It refers to stability – additional capacitor is series with internal amplifier resistance brings pole in transfer function, which lowers phase margin of the system. As a result there can occur "ringing" in output signal.  In this system it can be neglected. For more details see [Op Amps Driving Capacitive Loads](https://www.analog.com/en/analog-dialogue/articles/ask-the-applications-engineer-25.html)
 
 ## Filter design
+High pass filter is needed to remove DC component of the signal, which is 
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
 
@@ -338,10 +337,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTgzMjY3NDksNjgxMzY1MjMyLC0xNj
-MyOTE3OTQ3LC0xODcwNzU5OTEsMTIwNzcwOTQ1MCw5NDk1MzA4
-ODAsNDk4Mzk1MSwxMTk4NTA1NjAwLC0xNDE1MDE2Mzk4LDI2OT
-c3OTc2NywtMTY0NTkyMjExOSwtNDM2NzU0NjA1LC0yMDM0NDE2
-MDU0LC0yMDQ5NDYzMjcsMTQ5OTUwNjczNCw5ODQ4NDY0MzgsLT
-E1NjA4MTA1LC0xNzYwNzk2NjU5LC0xNzA0NDE1NTUwXX0=
+eyJoaXN0b3J5IjpbMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2OD
+EzNjUyMzIsLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5
+NDUwLDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MT
+UwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2
+MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2NzM0LD
+k4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLTE3MDQ0
+MTU1NTBdfQ==
 -->
