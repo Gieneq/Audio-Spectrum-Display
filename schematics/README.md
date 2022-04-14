@@ -220,18 +220,20 @@ High pass RC filter will be used with 3dB angular frequency firstly set to 125ra
 As closest resistance to 5k, a 4.7k resistor was chosen.
 ```python
 w0 = 125
-R0 = 4700
-C0 = 1/(R0*w0)
+R1 = 4700
+C1 = 1/(R0*w0)
 print(C0)
 ```
 Thus resulting capacity is 1.7uF:
 >1.7021276595744682e-06
 
-Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is:
+Because 2.2uF capacitor is available, it will be chosen. It's reactance called capacitance is given by formula:
 
-|Capacitance of 2.2 uF capacitor|
+<img height="50" src="https://render.githubusercontent.com/render/math?math=X_{C1} = \Im(-j\frac{1}{\omega C_1}) = \frac{1}{\omega C_1}[\Omega]" >
+
+|Capacitance of 2.2uF capacitor|
 |:-:|
-|<img src="capacitance_1u6F.png" alt="" width="500">|
+|<img src="img/capacitance.png" alt="Capacitance of 2.2uF capacitor" width="500">|
 
 Then new cutoff frequency is **96rad/s**:
 ```python
@@ -241,21 +243,73 @@ print(w0)
 ```
 >96.71179883945841
 
+Including output impedance of signal source:
 
-
-
-
-Now the question is wherher it is a good choice. System looks like this with internal impedance 50R included:
-
-|Schematic of audio source with RC high pass filter|
+|RC Filter schematic|
 |:-:|
-|<img src="schematic_microphone_high_pass.png" alt="" width="500">|
+|<img src="img/microphone_RC_filter.png" alt="RC Filter schematic" width="500">|
+
+### Voltage gain
+To find out how voltage varies with frequency finding capacitors impedance is needed:
+
+<img height="50" src="https://render.githubusercontent.com/render/math?math=Z_{C1} = -j\frac{1}{\omega C_1}[\Omega]" >
+
+Hence voltage divider gives:
+
+<img height="50" src="https://render.githubusercontent.com/render/math?math=U_{out} = U_{in}\frac{R_1}{R_{in} \!%2B\! R_1 \!%2B\! Z_{C1}}[V]" >
+
+Which can be simply converted to gain:
+
+<img height="50" src="https://render.githubusercontent.com/render/math?math=k = \frac{U_{out}}{U_{in}} = \frac{R_1}{R_1 \!%2B\! R{in}-j(wC)^{-1}} = \frac{R_1(R_1 \!%2B\! R{in}) \!%2B\! jR_1(wC)^{-1} }{(R_1 \!%2B\! R{in})^2 \!%2B\! (wC)^{-2}}[V/V]" >
+
+```python
+ZC1 = -1j/(w_draw*C1)
+k = R1/ (R1 + Rin + ZC1)
+```
+
+Gain is  complex number, so it can be plotted in complex plane:
+
+|System gain varies with signal angular frequency|
+|:-:|
+|<img src="img/system_gain_plot.png" alt="System gain varies with signal angular frequency" width="500">|
+
+At cutoff frequency real and imaginary part are equal:
+```python
+ZC1_w0 = -1j/(w0*C1)
+k_w0 = R1/ (R1 + Rin + ZC1_w0)
+
+print(f"k at cutoff frequency: {k_w0:g} [V/V]")
+print(f"magnitude: {np.absolute(k_w0):g} [V/V]")
+print(f"phase: {np.angle(k_w0)*180/pi:g} deg")
+```
+>k at cutoff frequency: 0.494737+0.494737j [V/V] 
+>magnitude: 0.699664 [V/V] 
+>phase: 45 deg
+
+Phase shift is 45° as expected, but magnitude is not 0.707. That's because 3dB refers to filter block consisting of 2 components. In this case internal resistance is taken into account, without it results are as predicted:
+>k at cutoff frequency: 0.5+0.5j [V/V] 
+>magnitude: 0.707107 [V/V] 
+>phase: 45 deg
+
+|System gain with internal resistance (red) and without (blue)|
+|:-:|
+|<img src="img/system_gain_plot_no_rin.png" alt="System gain with internal resistance (red) and without (blue)" width="500">|
+
+More informations can be obtained by splitting complex plot into two separate parts in function of angular frequency:
+- magnitude plot,
+- phase plot.
+
+|System gain: phase and magnitude|
+|:-:|
+|<img src="img/system_gain_plot_phase_magnitude.png" alt="System gain: phase and magnitude" width="500">|
+
+
 
 ## Capacitor reactance
 
 Capacitor reactance which is imaginary part of complex capacitor's impedance is given by formula:
 
-<img height="50" src="https://render.githubusercontent.com/render/math?math=X_C = \Im(-j\frac{1}{\omega C}) = \frac{1}{\omega C}" >
+
 
 Generate angular frequency Numpy array:
 
@@ -338,11 +392,11 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTIzMjI0MCw0NjIwMTAwMDksMTIzOT
-Q2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIsLTE2MzI5MTc5
-NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OTUzMDg4MCw0OT
-gzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgsMjY5Nzc5NzY3
-LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMzQ0MTYwNTQsLT
-IwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQzOCwtMTU2MDgx
-MDVdfQ==
+eyJoaXN0b3J5IjpbMjAwNDQ1NzYzNCwxMDMwMTEzOTgyLDE3Mj
+M1ODA2NTksMTU2NTc1NTA2MSw2MjgyMzIyLC01Njc5MzE5NSwt
+MzgzNjcyMTY1LDE3NDcwMTk4MDYsLTUzNTIzMjI0MCw0NjIwMT
+AwMDksMTIzOTQ2NjE1OSwtMTM5ODMyNjc0OSw2ODEzNjUyMzIs
+LTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OT
+UzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOThd
+fQ==
 -->
