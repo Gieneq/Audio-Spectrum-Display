@@ -199,6 +199,8 @@ Selected parameters:
 
 As indicated earlier the load resistance should be much greater than internal resistance of signal source. In this case it is recommended to use 100 times higher resistance. So module of filter impedance cannot drop below 5k. 200pF maximal capacitive load refers to stability and can be neglected in this system.
 
+
+
 ## Filter design
 
 Assumed signal frequency ranges from 20Hz (125rad/s) to 20kHz (125664rad/s). 
@@ -323,10 +325,10 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA3NTk5MSwxMjA3NzA5NDUwLDk0OT
-UzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAsLTE0MTUwMTYzOTgs
-MjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00MzY3NTQ2MDUsLTIwMz
-Q0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2NzM0LDk4NDg0NjQz
-OCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLTE3MDQ0MTU1NTBdfQ
-==
+eyJoaXN0b3J5IjpbLTE2MzI5MTc5NDcsLTE4NzA3NTk5MSwxMj
+A3NzA5NDUwLDk0OTUzMDg4MCw0OTgzOTUxLDExOTg1MDU2MDAs
+LTE0MTUwMTYzOTgsMjY5Nzc5NzY3LC0xNjQ1OTIyMTE5LC00Mz
+Y3NTQ2MDUsLTIwMzQ0MTYwNTQsLTIwNDk0NjMyNywxNDk5NTA2
+NzM0LDk4NDg0NjQzOCwtMTU2MDgxMDUsLTE3NjA3OTY2NTksLT
+E3MDQ0MTU1NTBdfQ==
 -->
