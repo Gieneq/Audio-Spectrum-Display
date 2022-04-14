@@ -249,6 +249,7 @@ Including output impedance of signal source:
 |:-:|
 |<img src="img/microphone_RC_filter.png" alt="RC Filter schematic" width="500">|
 
+### System impedance 
 
 
 
@@ -340,7 +341,7 @@ Coming coon
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNjgxMDExOSwxNzQ3MDE5ODA2LC01Mz
+eyJoaXN0b3J5IjpbLTM4MzY3MjE2NSwxNzQ3MDE5ODA2LC01Mz
 UyMzIyNDAsNDYyMDEwMDA5LDEyMzk0NjYxNTksLTEzOTgzMjY3
 NDksNjgxMzY1MjMyLC0xNjMyOTE3OTQ3LC0xODcwNzU5OTEsMT
 IwNzcwOTQ1MCw5NDk1MzA4ODAsNDk4Mzk1MSwxMTk4NTA1NjAw
