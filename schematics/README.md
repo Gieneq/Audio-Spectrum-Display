@@ -178,7 +178,7 @@ Voltage parameters were gathered and comapred in table:
 |DC offset|1.22V|Symetrical 0V|
 |Amplitude|1.245V|1.185V|
 |V RMS|0.88V|0.84V|
-|Gain|Constant 40/50/60dB|Dpendant on source|
+|Gain|Constant 40/50/60dB|Dependant on source|
 
 Signal from microphone should be **high pass filtered** to **remove DC component**. At this stage builtin amplifier is set to maximum 60dB, but there exists option to lower gain in case of clipping. RMS voltage value is similar to audio jack input, a bit higher which combines well with damping of passive filter.
 
