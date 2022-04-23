@@ -2,6 +2,16 @@
 #include "Arduino.h"
 #include "FastLED.h"
 
+
+typedef enum {
+    ENERGY_CURRENT,
+    ENERGY_BURST,
+    ENERGY_MEAN
+}energy_t;
+
+typedef void (*effect_handler_t)(const int* bar_heights, const double* bar_thrs, double* energy, CRGB* display_leds, CRGB* base_leds);
+
+
 /*
  * DEBUG
  */
