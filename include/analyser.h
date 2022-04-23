@@ -2,8 +2,8 @@
 
 #include <Arduino.h>
 #include "arduinoFFT.h"
-#include "bands.h"
 #include "presets.h"
+#include "bands.h"
 
 void analyser_begin();
 void sample_blocking();

@@ -1,0 +1,40 @@
+Partlist
+Part     Value                   Device                  Package                 Library             Sheet
+
+C1       100nF                   C-EU025-025X050         C025-025X050            rcl                 1
+C2       100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C3       1uF                     C-EU025-025X050         C025-025X050            rcl                 1
+C4       100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C5       100nF                   C-EU025-025X050         C025-025X050            rcl                 1
+C6       100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C7       100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C8       10uF                    CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C9       100nF                   C-EU025-025X050         C025-025X050            rcl                 1
+C10      100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+C11      100nF                   C-EU025-025X050         C025-025X050            rcl                 1
+C12      1uF                     C-EU025-025X050         C025-025X050            rcl                 1
+C13      100uF                   CPOL-EUE2.5-7           E2,5-7                  rcl                 1
+D1       3.3V                    ZENER-DIODEDO34-7       DO34Z7                  diode               1
+F1       6V/2A                   PPTC_6V2A               1210                    SparkFun-Fuses      1
+IC1      TDA2822                 DIL8                    DIL08                   ic-package          1
+J1       AUDIO_JACK_3.5MM_KIT    AUDIO_JACK_3.5MM_KIT    AUDIO-JACK-KIT          SparkFun-Connectors 1
+JP1      MAX9814                 PINHD-1X5/90            1X05/90                 pinhead             1
+JP2      Gain sel                PINHD-1X3/90            1X03/90                 pinhead             1
+JP3      JUMPER-SMT_2_NO_NO-SILK JUMPER-SMT_2_NO_NO-SILK SMT-JUMPER_2_NO_NO-SILK SparkFun-Jumpers    1
+JP4      JUMPER-SMT_2_NO_NO-SILK JUMPER-SMT_2_NO_NO-SILK SMT-JUMPER_2_NO_NO-SILK SparkFun-Jumpers    1
+JP7                              PINHD-1X3               1X03                    pinhead             1
+JP8                              PINHD-1X3               1X03                    pinhead             1
+JP12                             PINHD-1X2               1X02                    pinhead             1
+LED1                             LED5MM                  LED5MM                  led                 1
+R1       screw_10k               3RP/1610N               3RP/1610N               pot                 1
+R2       10k                     R-EU_0207/7             0207/7                  rcl                 1
+R3       1k                      R-EU_0207/7             0207/7                  rcl                 1
+R4       1k                      R-EU_0207/7             0207/7                  rcl                 1
+R5       100k                    R-EU_0207/7             0207/7                  rcl                 1
+R6       100k                    R-EU_0207/7             0207/7                  rcl                 1
+R8       470k                    R-EU_0207/7             0207/7                  rcl                 1
+R9       470k                    R-EU_0207/7             0207/7                  rcl                 1
+R10      10k                     R-EU_0207/7             0207/7                  rcl                 1
+R11      10k                     R-EU_0207/7             0207/7                  rcl                 1
+U$2      ESP32                   ESP32                   ESP32                   ESP32               1
+V1       74125N                  74125N                  DIL14                   74ttl-din           1
