@@ -117,10 +117,17 @@ The most important thing is to use better ADC converter to achieve wider bandwid
 
 To do:
 - [x] Order ADS1256 ADC,
-- [ ] Test ADS1256,
+- [x] Test ADS1256,
 - [ ] BPM detector,
 - [ ] Hardware FFT with FPGA (or separate MCU),
 - [ ] WiFi and Home Assistant Integration,
 - [ ] Driving Board PCB,
-- [ ] Better preamplifier circuit.
+- [x] Better preamplifier circuit.
+
+## Contact 📲
+- [Instagram](https://www.instagram.com/invites/contact/?i=v7a3pc32bt2l&utm_content=mko82v9) as pyrograf.pl
+- [Pintrest](https://pl.pinterest.com/pyrografpl/) as pyrografpl
+- [Facebook](https://www.facebook.com/pyrografpl/) as pyrografpl
+- [Reddit](https://www.reddit.com/user/pyrograf) as Pyrograf
+- [Forbot forum - Poland](https://forbot.pl/forum/topic/20787-wyswietlacz-widma-audio---esp32-i-399-ws2812b/page/4/?tab=comments#comment-177398) as Gieneq
 
