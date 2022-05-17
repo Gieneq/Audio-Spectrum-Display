@@ -38,7 +38,6 @@ double dt;
 double velocities[BANDS_COUNT];
 double gravity = 100;
 
-int bars[BANDS_COUNT]; //rendering
 
 constexpr int ENERGY_PARAMS_COUNT = 3;
 double energy[ENERGY_PARAMS_COUNT];

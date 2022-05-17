@@ -11,6 +11,7 @@
 #include "soc/timer_group_struct.h"
 #include "soc/timer_group_reg.h"
 
+extern int bars[BANDS_COUNT]; //rendering
 // void display_begin();
 // void display_show();
 
