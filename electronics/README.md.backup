@@ -25,4 +25,4 @@ Check Instructables for more details about designing. Simulation of this circuit
   <img width="500" alt="Simulation of analog filter using Notebook and Python complex math" src="notebook_simulation_filter.png">
 </p>
 
-As seen in diagram inside considered frequency range amplitude is nearly constant. The voltage level can be changed by trimming the potentiometer - visible change in blue and red plots.
+Ass seen in diagram inside considered frequency range amplitude is nearly constant. Voltage level can be changed by trimming potentiom
