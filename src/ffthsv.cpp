@@ -1,12 +1,5 @@
 #include "ffthsv.h"
 
-/*
- * VARIABLES
- */
-// effect_t queue[] = {effect_t::FIRE, effect_t::PULSE, effect_t::CLASSIC, effect_t::COLOROFON, effect_t::ORIGINAL, effect_t::COLOROFON_EXTENDED};
-// int effect_index;
-// long next_effect_time;
-
 CRGB display_leds[DISPLAY_LEDS_COUNT];
 CRGB base_leds[BASE_LEDS_COUNT];
 
@@ -50,8 +43,6 @@ hw_timer_t * sampling_timer = NULL;
 portMUX_TYPE sampling_timerMux = portMUX_INITIALIZER_UNLOCKED;
 
 
-
-
 /*
  * CALC ALL BAR HEIGHTS
  */
@@ -75,17 +66,14 @@ void calc_movement(double* thrs, double* pos, double* vel, double grav, int data
 
 
         diffs[i] = thrs[i] - pos[i];
-        // idz w gore
+        // go up
         if(diffs[i] >= 0.0) {
-            // vel[i] += 32.0 * diff/21.0;
             pos[i] = thrs[i];
             vel[i] = 0;
         }
         else{
             vel[i] += -grav * dt - 0.5;
         }
-
-        // vel[i] += -grav * dt;
     }
 }
 
@@ -134,13 +122,6 @@ void feedTheDog(){
 }
 
 
-
-
-
-
-
-
-
 /*
  * CORE 0 INTERRUPT - SAMPLING ADC
  */
@@ -175,7 +156,7 @@ void core0_task(void * parameter) {
         load_samples(reading_buffer_index, readings_buffer, READING_BUFFER_SIZE);
         calculate_bars();
         double* fft_bars = get_magnitudes();
-        // feed_mean_buffer(fft_bars, BARS_COUNT);
+        
         for(int i = 0; i < BANDS_COUNT; i++)
             mags[i] = fft_bars[i];
 
@@ -199,15 +180,10 @@ void core0_task(void * parameter) {
         }
         #endif
 
-        // vTaskDelay(pdMS_TO_TICKS(1));
         feedTheDog();
         loops_counter++;
     }
 }
-
-// void display_effect(const int* bar_heights, const double* bar_thrs, double energy, double burst_energy, double mean_energy, effect_handler_t effect_function) {
-//   effect_function(bar_heights, bar_thrs, energy, burst_energy, mean_energy, display_leds, base_leds);
-// }
 
 static inline void display_show(){
   FastLED.show();
@@ -237,13 +213,6 @@ void FFTHSV_begin(){
  * CORE 1 - CALC EFFECTS, DRAW USING LEDS
  */
 void FFTHSV_update(){
-
-    // if(millis() - next_effect_time > EFFECTS_SHUFFLE_INTERVAL) {
-    //     ++effect_index %= EFFECTS_COUNT;
-    //     set_effect(queue[effect_index]);
-    //     next_effect_time += EFFECTS_SHUFFLE_INTERVAL;
-    // }
-
     if(millis() - last_time_update > UPDATE_INTERVAL_MS) {
         dt = (millis() - last_time_update)/1000.0; //sekundy
 

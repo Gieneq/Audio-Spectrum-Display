@@ -22,9 +22,8 @@ void analyser_begin() {
         vReal[i] = 0.0;
         vImag[i] = 0.0;
     }
-    for (int i = 0; i < BANDS_COUNT; i++) {
+    for (int i = 0; i < BANDS_COUNT; i++)
         magnitude_bands[i] = 0.0;
-    }
 }
 
 void sample_blocking(){
@@ -66,11 +65,3 @@ void calculate_bars() {
 double* get_magnitudes() {
     return magnitude_bands;
 }
-
-void feedTone(double frequency) {
-    // for (int i = 0; i < SAMPLES_COUNT; i++) {
-    //     vReal[i] = 512.0 + 256.0*sin(2.0*3.1415*frequency * i / SAMPLING_FREQUENCY);
-    //     vImag[i] = 0;
-    // }
-}
-

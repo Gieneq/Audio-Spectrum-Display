@@ -22,7 +22,7 @@ void inline set_hsv(CRGB* hsv_leds, int x, int y, uint8_t h, uint8_t s, uint8_t 
 constexpr uint8_t FIRE_TONGUE_HUE[] = {12, 16, 32, 33, 34, 35, 36, 37, 37, 37, 37, 36, 35, 34, 33, 20, 19, 18, 255, 255, 255};
 int burnt[DISPLAY_LEDS_COUNT];
 constexpr uint8_t FIRE_HUE = 22; 
-constexpr uint8_t BURNT_HSV_VALUE = 32;//static_cast<uint8_t>(-0.18 MEAN + 68);
+constexpr uint8_t BURNT_HSV_VALUE = 32;
 constexpr uint8_t BURNT_HUE = 254;
 constexpr long BURN_INTERVAL = 300;
 long last_burn_time;

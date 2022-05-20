@@ -16,7 +16,6 @@ void setup() {
     FFTHSV_select_effect(0);
 }
 
-
 void loop() {
     FFTHSV_update();
 }
