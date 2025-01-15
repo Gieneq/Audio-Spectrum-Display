@@ -8,6 +8,8 @@ The 19 bands (21 height) audio spectrum display built around the ESP32 chip. It 
 
 Project is finished and working, but there are some improvents to be done. [Subscribe me on YouTbe](https://www.youtube.com/channel/UCZFgL5xrtGkf4WiEQYAMehw/videos) to be up to date with further updates.
 
+New version using ESP32S3 with LCD visualization here: [ESP32S3 + LCD ASD](https://github.com/Gieneq/esp32s3_asd)
+
 ## Content 📦
 
 You will find all you need to DIY your own display:
